@@ -45,3 +45,14 @@ Publish the files as **Release Assets** in this fork. Record their real SHA-256 
 - Natalia Chala Chala
 - Kevin Stiven López Amaya
 - Karen Daniela Holguín Cruz
+
+
+## Documentación original de Google Drive — incluir en Assets
+
+**Carpeta original del proyecto:** https://drive.google.com/drive/folders/1FI2E_qAiMVAG1lDXIPhSyPoFF3Pc8ndQ
+
+Se descargaron y conservaron **15 archivos de 12 secciones**: documentación general (SRS y costos), navegación, propuesta técnica, diseño, artefactos de código (enlace a repositorio), pruebas, implementación, acciones correctivas, manuales, artículo, despliegue y términos/política de datos. Se conservaron archivos repetidos en sus carpetas de origen.
+
+Adjuntar preferentemente **`SmartHome_Release_Todo.zip`**, que integra **esos 15 archivos originales** y **37 archivos académicos previamente preparados**; incluye inventario y SHA-256 de cada contenido. También existe la copia separada `SmartHome_Drive_Completo.zip` si se requiere presentar la fuente de Drive por separado.
+
+**Estos ZIP son de DOCUMENTACIÓN. No reemplazan los paquetes de código/tag/exportación Git ni los videos.** Verificar que no contienen datos personales o secretos antes de hacer público el Release. El archivo `Repositorio.txt` en Drive contiene un enlace, no una copia completa del código.
