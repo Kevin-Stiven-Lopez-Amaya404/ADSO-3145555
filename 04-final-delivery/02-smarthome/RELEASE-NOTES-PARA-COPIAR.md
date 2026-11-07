@@ -23,9 +23,9 @@ The project documentation is organized in the institutional folder:
 
 **[04-final-delivery/02-smarthome/](https://github.com/code-sena/ADSO-3145555/tree/main/04-final-delivery/02-smarthome)**
 
-Included deliverables: software analysis, architecture/design, test documentation, implementation procedure, corrective and improvement actions, technical/installation/end-user manuals, project article, project team and registration records. Requirements specification, technical proposal and two videos are tracked in the corresponding folder and must be confirmed before submission.
+The **consolidated PR #17** now includes the source documents of PR #13 and final PDF documents in institutional sections **01 (SRS), 02 (analysis), 04 (design), 05 (tests), 06 (implementation) and 09 (article)**. Technical proposal, corrective actions and technical/manual sources are also available as DOCX and Markdown; confirm definitive PDF versions as needed. Team and software-registration details have been drafted for individual verification, not signed.
 
-An optional supporting asset, `SmartHome_Documentacion_Release_ADSO-3145555.zip`, contains the prepared PDF, Word and Markdown documents. This **does not replace** the institutional documentation folder.
+An optional documentation asset, `SmartHome_Release_Todo.zip`, contains 15 original Drive files and 37 previously prepared academic files; a corrected supplementary pack with the final-format PDFs is also available from the team. This **does not replace** the institutional documentation folder.
 
 ## Code Packages and Integrity
 
@@ -56,3 +56,16 @@ Se descargaron y conservaron **15 archivos de 12 secciones**: documentación gen
 Adjuntar preferentemente **`SmartHome_Release_Todo.zip`**, que integra **esos 15 archivos originales** y **37 archivos académicos previamente preparados**; incluye inventario y SHA-256 de cada contenido. También existe la copia separada `SmartHome_Drive_Completo.zip` si se requiere presentar la fuente de Drive por separado.
 
 **Estos ZIP son de DOCUMENTACIÓN. No reemplazan los paquetes de código/tag/exportación Git ni los videos.** Verificar que no contienen datos personales o secretos antes de hacer público el Release. El archivo `Repositorio.txt` en Drive contiene un enlace, no una copia completa del código.
+
+
+## Correcciones para evaluación del instructor — 7 de noviembre de 2026
+
+- **Un solo PR:** [PR #17](https://github.com/code-sena/ADSO-3145555/pull/17) contiene ahora los cinco archivos originales aportados en el [PR #13](https://github.com/code-sena/ADSO-3145555/pull/13) y los nuevos informes. Solicitar a su autora cerrar el #13 tras comprobar la consolidación, y al mantenedor revisar el #17. Ninguno se ha fusionado a `code-sena/main`.
+- **PDF:** se incorporaron archivos finales en `01-requirements-specification`, `02-software-analysis`, `04-software-design`, `05-test-documentation`, `06-implementation-procedure` y `09-project-article`.
+- **Documentación oficial de trabajo:** `Kevin-Stiven-Lopez-Amaya404/smart-home-doc` (repositorio documental completo). El `smart-home-docs` solicitado como fuente histórica aún debe incluirse según indicación del instructor, pero no es el canónico. La BD vigente es `nataliachala1/smarthome-database`, distinta de `smart-home-database` histórico; véase `code-tag/README.md`.
+- **Videos disponibles:** demo web 06:29 y demo móvil 10:05. **No cumplen** los rangos 01–02 min del pitch ni 03–05 min del tutorial. Requieren edición y comprobación de acceso por enlace con permiso Lector.
+- **Registro software:** funciones, lenguajes, tipo de software y aportes propuestos están documentados. Continúan pendientes las tres autorizaciones personales y las declaraciones legales de originalidad, clase de obra y publicación.
+- **Cinco tags y diez ZIP:** no existen aún `final-delivery-2026` ni los diez paquetes de código validados; no declararlos listos hasta crearles y comprobar SHA-256 y `main` aprobado. El ZIP académico **no sustituye** los ZIP de código.
+- **Permisos:** el instructor `ariel5253` necesita Write en cada repositorio. En dos repositorios de Stiven se observó solo Read; los permisos en repositorios de Natalia requieren verificación por su titular.
+
+**Nota: este documento es la descripción propuesta, no evidencia de que el GitHub Release se haya publicado o aprobado.**
