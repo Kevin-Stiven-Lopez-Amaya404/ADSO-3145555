@@ -31,3 +31,25 @@ Este inventario consolida en el **PR #17** los archivos originalmente aportados 
 - La entrega necesita aprobación institucional; los permisos de la cuenta conectada impiden fusionar en `code-sena/main`.
 
 **Estado:** PDF académicos 01/02/04/05/06/09 disponibles; registros técnicos parcialmente diligenciados; videos y tags todavía no conformes.
+
+## Evidencia de corrección web (7 de noviembre de 2026)
+
+- [PR #7 en fork web](https://github.com/Kevin-Stiven-Lopez-Amaya404/smarthome-frontend-web/pull/7): **fusionado en `dev` del fork**; commit `9928217825c79cf8150b0dd97ce2937c1d95603d`.
+- [CI de la rama de corrección: SUCCESS](https://github.com/Kevin-Stiven-Lopez-Amaya404/smarthome-frontend-web/actions/runs/42395316954).
+- [CI de `dev` tras la fusión: SUCCESS](https://github.com/Kevin-Stiven-Lopez-Amaya404/smarthome-frontend-web/actions/runs/42395677610).
+- **Pendiente en `nataliachala1/smarthome-frontend-web`:** introducir y verificar el mismo cambio en `dev`, promoverlo con aprobación por `qa` a `main` y confirmar smoke del `main` antes de crear el tag final. La conexión de Stiven no tiene permiso para crear ese PR en upstream (403).
+
+## Acciones mínimas que siguen impidiendo la evaluación definitiva
+
+| Responsable | Acción verificable | Estado |
+|---|---|---|
+| Natalia (propietaria de repositorios) | Revisar corrección web en upstream; aprobar CI web y las versiones de `main` | Pendiente |
+| Equipo móvil | Probar APK/flujo físico Android, revisar PR #61 y PR #49 antes de promover `main` | Pendiente |
+| Daniela | Confirmar que sus 5 archivos de #13 aparecen en #17 y cerrar #13 **sin fusionar** | Pendiente; la cuenta conectada recibió 403 al intentar cerrar |
+| Instructor/mantenedor institucional | Revisar y fusionar PR #17 | Pendiente; 403 para la cuenta de Stiven |
+| Propietarios de Drive | Configurar enlaces `Cualquier persona con enlace → Lector` y probar acceso anónimo | Pendiente de comprobación |
+| Integrantes (cada uno) | Ratificar rol y aportes, y consentir voluntariamente la publicación de datos | Pendiente 3/3 |
+| Propietarios de 5 repositorios | Otorgar `Write` a `ariel5253`; congelar commits `main`, publicar 5 tags y 10 ZIP con hashes | Pendiente |
+| Equipo audiovisual | Confirmar pitch 01–02 min y tutorial 03–05 min accesibles mediante enlaces lectores | Pendiente |
+
+**Release real:** [`final-delivery` publicado](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/releases/tag/final-delivery), todavía con un único Asset documental `SmartHome.zip`. No equivale a la entrega verificada de cinco repositorios.
