@@ -34,7 +34,7 @@ Final delivery of the training project / Entrega final del proyecto formativo.
 - *Technology stack / Tecnologías:*
   - Backend: NestJS 11, TypeScript, Prisma 7 y Node.js.
   - Frontend web: React 18, TypeScript y Vite 6.
-  - Aplicación móvil: React Native, Expo 57 y TypeScript.
+  - Aplicación móvil: React Native, Expo y TypeScript. `dev/package.json` consultado el 07-11-2026 declara Expo ~58.0.23 y React Native 0.88.1; el README de `dev` todavía describe Expo 57. La versión final depende del commit y build aprobados.
   - Base de datos: PostgreSQL.
   - Comunicación: MQTT y Socket.IO.
   - Gestión de migraciones: Liquibase.
@@ -64,12 +64,12 @@ Autorización de datos: al marcar la casilla, el integrante confirma sus datos y
 |---|---|---|
 | [`01-requirements-specification/`](01-requirements-specification/) | Requirements specification / Especificación de requisitos | PDF del SRS subido en PR #17; pendiente aprobación |
 | [`02-software-analysis/`](02-software-analysis/) | Software analysis / Análisis del software | PDF de análisis subido en PR #17; pendiente aprobación |
-| [`03-technical-proposal/`](03-technical-proposal/) | Technical proposal / Propuesta técnica | ☐ |
+| [`03-technical-proposal/`](03-technical-proposal/) | Technical proposal / Propuesta técnica | [PDF](03-technical-proposal/03-technical-proposal.pdf) y [Word editable](03-technical-proposal/03-technical-proposal.docx) incorporados al PR; aprobación pendiente |
 | [`04-software-design/`](04-software-design/) | Software design / Diseño del software | PDF de diseño subido en PR #17; pendiente aprobación |
 | [`05-test-documentation/`](05-test-documentation/) | Test documentation / Documentación de pruebas | PDF de pruebas subido en PR #17; pendiente aprobación |
 | [`06-implementation-procedure/`](06-implementation-procedure/) | Implementation procedure / Procedimiento de implementación | PDF de implementación subido en PR #17; pendiente aprobación |
-| [`07-improvement-actions/`](07-improvement-actions/) | Improvement actions / Acciones de mejoramiento | ☐ |
-| [`08-manuals/`](08-manuals/) | Manuals / Manuales | ☐ |
+| [`07-improvement-actions/`](07-improvement-actions/) | Improvement actions / Acciones de mejoramiento | [PDF](07-improvement-actions/07-improvement-actions.pdf), [Word](07-improvement-actions/07-improvement-actions.docx) y Markdown actualizados en PR; aprobación pendiente |
+| [`08-manuals/`](08-manuals/) | Manuals / Manuales | [Técnico](08-manuals/technical-manual.pdf), [Instalación](08-manuals/installation-manual.pdf), [Usuario](08-manuals/end-user-manual.pdf), con DOCX y MD; aprobación pendiente |
 | [`09-project-article/`](09-project-article/) | Project article / Artículo del proyecto | PDF de artículo subido en PR #17; pendiente aprobación |
 | [`10-videos/`](10-videos/) | Videos / Videos | ☐ |
 | [`code-tag/`](code-tag/) | Repository links, tags and ZIP files / Enlaces, tags y ZIP | ☐ |
@@ -90,7 +90,7 @@ Aquí solo van archivos demasiado pesados para GitHub, como videos de demostraci
 
 Las casillas «Verificado y autorizado» de los tres integrantes **siguen desmarcadas**. Cada persona debe autorizar individualmente la publicación de sus datos y verificar los roles antes de aprobar el registro. No se ha marcado consentimiento en nombre de terceros.
 
-Los PDF académicos de las secciones 01, 02, 04, 05, 06 y 09 están incorporados a la rama del PR #17. Los tags/ZIP de código requieren aprobación y generación verificable; la documentación no sustituye los artefactos del software.
+Los PDF académicos de las secciones 01–09, incluido el grupo de tres manuales de 08, están incorporados a la rama del PR #17 (no a la rama institucional `main`). El Word histórico ISO permanece como anexo, sin considerarse un manual independiente. Los tags/ZIP de código requieren aprobación y generación verificable; la documentación no sustituye los artefactos del software.
 
 Carpeta de fuentes documentales: https://drive.google.com/drive/folders/1FI2E_qAiMVAG1lDXIPhSyPoFF3Pc8ndQ
 

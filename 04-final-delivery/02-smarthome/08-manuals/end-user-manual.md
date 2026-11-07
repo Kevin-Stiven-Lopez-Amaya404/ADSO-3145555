@@ -1,164 +1,115 @@
-# Manual De Usuario Final
+# Manual de usuario final — SmartHome
 
-**Proyecto:** SmartHome · **ADSO:** 3145555 · **Fecha:** 6 de noviembre de 2026
+**Servicio Nacional de Aprendizaje (SENA)**  
+**Programa:** Análisis y Desarrollo de Software · **Ficha:** 3145555  
+**Proyecto:** SmartHome · **Revisión documental:** 7 de noviembre de 2026  
+**Equipo:** Karen Daniela Holguín Cruz, Natalia Chala Chala y Kevin Stiven López Amaya  
+**Estado:** versión preparada para revisión académica; no publicada en el PR #17 ni aprobada por el instructor.
 
-**Elaborado por:** Natalia Chala Chala, Kevin Stiven López Amaya, Karen Daniela Holguín Cruz
+> **Control de versión.** Estos manuales parten de los tres Markdown de la rama `final-delivery/smarthome-stiven-20261107` del PR institucional #17 y se contrastaron con README y manifiestos `package.json` de las ramas `dev` accesibles el 7-11-2026. Son una referencia documental de desarrollo, no certificación de funcionamiento de una versión `main` etiquetada. No se ejecutaron instalaciones, pruebas Android ni operaciones eléctricas durante su elaboración.
 
----
 
-## 1. Bienvenida y finalidad
+## 1. ¿Qué es SmartHome?
 
-SmartHome es una solución pensada para que una persona pueda organizar sus hogares, consultar dispositivos conectados y entender mejor su consumo eléctrico. El sistema ofrece una interfaz web y una aplicación móvil. Este manual presenta recorridos habituales de uso sin asumir que todas las funciones de un prototipo antiguo estén disponibles en el entorno que tenga instalado el usuario.
+SmartHome ayuda a organizar hogares, consultar dispositivos conectados, visualizar información de consumo eléctrico y revisar avisos. Cuenta con una interfaz web y una aplicación móvil Android. Las opciones visibles dependen de la versión instalada, del hogar seleccionado y de los permisos de tu cuenta.
 
-Las instrucciones se basan en pantallas y rutas del código web y móvil. Los nombres visibles pueden variar ligeramente según idioma, sesión y versión. Si una opción no aparece, no intentes forzar la navegación: consulta con el administrador o comprueba que se haya instalado la versión correcta.
+**Antes de comenzar:** necesitas una cuenta habilitada, acceso al servicio configurado por el equipo y, para operar un dispositivo, autorización sobre ese hogar. Nunca compartas contraseñas, códigos ni tokens. Las pantallas descritas son una guía documental: deben comprobarse con una demostración de la versión aprobada.
 
-## 2. Antes de comenzar
+## 2. Entrar a tu cuenta
 
-- Necesitas una cuenta habilitada de SmartHome y acceso a Internet o a la red de prueba autorizada.
-- Si vas a controlar un dispositivo IoT, debe estar registrado y disponible en tu hogar, y tu rol debe permitir esa operación.
-- Para usar la web, abre la dirección que te suministró el equipo; localhost es solo un ejemplo para un entorno local.
-- En Android, utiliza la aplicación o build proporcionada por el equipo; las funciones BLE pueden requerir una build nativa.
-- No compartas claves, tokens ni códigos de recuperación con otras personas.
+1. Abre la dirección web o aplicación Android que te entregó el equipo.
+2. En la pantalla de acceso, escribe tu correo y contraseña.
+3. Selecciona **Iniciar sesión** y comprueba el mensaje de respuesta.
+4. Si olvidaste tu contraseña, utiliza la opción oficial de recuperación; sigue el enlace enviado por el sistema.
+5. Si te solicitan activar o reactivar la cuenta, completa ese proceso antes de volver a ingresar.
 
-## 3. Registro, inicio de sesión y recuperación
+La web documenta una ruta `/login` con enlaces de registro, activación y recuperación. No todas las funciones se mostrarán de la misma manera en la app Android. Evita enviar capturas que muestren tu correo, códigos de activación o datos de otras personas.
 
-### 3.1. Iniciar sesión
+## 3. Reconocer las pantallas
 
-1. Abre SmartHome en tu navegador o teléfono Android.
-1. Busca la pantalla de acceso y escribe el correo electrónico asociado a tu cuenta.
-1. Introduce tu contraseña y selecciona Iniciar sesión.
-1. Si los datos y el estado de la cuenta son válidos, accederás al panel principal; de lo contrario, revisa el mensaje de error.
+| Web | Aplicación móvil |
+|---|---|
+| Panel principal, Hogares, Dispositivos, Consumo, Notificaciones, Perfil | Inicio, Hogares, Energía, Avisos, Perfil |
 
-En la web existe una ruta de inicio de sesión /login y enlaces a registro, recuperación, activación y reactivación de cuenta. En móvil la navegación depende de tu estado de autenticación.
+En móvil, **Dispositivos** puede aparecer dentro de un hogar en lugar de ser una pestaña independiente. Verifica el nombre del hogar activo antes de consultar consumo o realizar controles.
 
-### 3.2. Crear o recuperar el acceso
+## 4. Consultar y administrar hogares
 
-1. Si no tienes cuenta, utiliza la opción de registro disponible en la pantalla de acceso.
-1. Completa los campos solicitados y sigue los avisos mostrados en pantalla.
-1. Si olvidaste tu contraseña, selecciona la opción de recuperación y utiliza únicamente el enlace enviado por el procedimiento oficial.
-1. Si el sistema solicita activar la cuenta, sigue esa ruta antes de volver a intentar el acceso.
+1. Abre **Hogares** o **Mis hogares**.
+2. Elige el hogar que deseas visualizar.
+3. Si tienes permiso, utiliza las opciones visibles para crear o editar un hogar.
+4. Entra al detalle para ver dispositivos y datos del hogar.
+5. Si aparece «Acceso denegado», consulta con el propietario: tu cuenta puede pertenecer a otro hogar o tener un rol restringido.
 
-**Privacidad.** El personal de soporte nunca necesita que le envíes tu contraseña por chat. Si compartes una captura, oculta correo, códigos de verificación y datos personales.
+Existen permisos diferentes para propietarios, miembros e invitados. No interpretes la presencia de un botón como autorización completa: el servidor verifica los permisos cuando se envía una acción.
 
-## 4. Cómo orientarse por la aplicación
+## 5. Consultar dispositivos
 
-| Plataforma | Navegación principal en el código | Recomendación |
-| --- | --- | --- |
-| Web | Dashboard, Hogares, Dispositivos por hogar, Consumo, Notificaciones, Perfil | Primero selecciona el hogar; algunas páginas requieren un homeId válido. |
-| Móvil | Inicio, Hogares, Energía, Avisos y Perfil | Usa las pestañas de navegación y verifica el hogar activo. |
+1. Selecciona el hogar correcto.
+2. Entra a **Dispositivos** dentro del contexto del hogar.
+3. Busca por nombre si hay muchos equipos; abre su detalle.
+4. Observa el estado reportado por la aplicación antes de actuar.
+5. Para encender o apagar, utiliza el control disponible **solo si tu rol lo permite** y revisa el resultado.
 
-La sección de dispositivos puede estar incluida dentro del contexto del hogar, por lo que no necesariamente aparece como una pestaña independiente en el móvil.
+**Muy importante:** si la aplicación dice que se **envió** una orden, eso no garantiza que el relé haya cambiado físicamente. No te acerques a un cable o carga eléctrica suponiendo que está desconectada; comprueba el estado real y sigue las instrucciones del fabricante.
 
-## 5. Gestión de hogares
+## 6. Agregar un Shelly compatible
 
-1. Entra en Hogares o Mis hogares.
-1. Selecciona el hogar que quieres consultar o administrar.
-1. Si tienes permisos adecuados, utiliza las opciones disponibles para crear o editar un hogar; los campos exactos dependen de la versión instalada.
-1. Comprueba que el hogar activo sea el correcto antes de consultar consumo o ejecutar acciones sobre dispositivos.
-1. Si recibes un mensaje de acceso denegado, verifica tu membresía con el propietario del hogar.
+La aplicación puede mostrar opciones para agregar dispositivos, descubrirlos por red o usar Bluetooth. La documentación del backend indica que el proceso completo de vinculación inicial Shelly desde cero aún requiere validación; BLE en Android incluye funciones experimentales.
 
-Los permisos se administran mediante roles globales y roles específicos por hogar. La experiencia puede mostrar controles distintos para OWNER, MEMBER y GUEST. Los invitados deben tratarse como usuarios con acceso limitado; no se debe esperar que puedan controlar todos los equipos.
+1. Abre **Agregar dispositivo** cuando esté disponible.
+2. Sigue las indicaciones específicas para el modelo y el entorno autorizado.
+3. Si no aparece, comprueba el estado de conexión y la versión de la app.
+4. No reinicies, reconfigures Wi-Fi ni cambies contraseñas del equipo por ensayo y error.
+5. Comunica al responsable técnico el mensaje mostrado, sin enviar claves ni identificadores sensibles.
 
-## 6. Consulta de dispositivos
+## 7. Consultar energía y consumo
 
-1. Abre el hogar que deseas administrar.
-1. Accede a Dispositivos del hogar.
-1. Utiliza el buscador si hay varios equipos registrados.
-1. Abre el detalle del equipo para consultar información y acciones disponibles.
-1. Si aparece un dispositivo inactivo y tu rol lo permite, revisa la opción de reactivación antes de operar sobre él.
+1. Elige tu hogar activo.
+2. Abre **Energía** en Android o **Consumo** en el entorno web.
+3. Selecciona el período ofrecido en pantalla (por ejemplo, día, mes o año).
+4. Consulta indicadores y gráficas cuando existan mediciones almacenadas.
+5. Si hay un botón de exportación habilitado, podrás generar o compartir archivos según los formatos disponibles en tu versión.
 
-La página web implementa búsqueda, lista de dispositivos activos e inactivos, estados y acciones según permisos. Si la lista está vacía, revisa que hayas seleccionado el hogar correcto.
+**Diferencia importante:** W o kW describen potencia en un instante; kWh describe energía acumulada en un período. Si una gráfica está vacía, puede faltar telemetría o selección de hogar: **no significa necesariamente que el consumo haya sido cero**.
 
-### 6.1. Encender y apagar dispositivos
+## 8. Avisos, notificaciones y perfil
 
-1. Comprueba que el dispositivo mostrado corresponde a tu hogar.
-1. Si tu rol autoriza la acción, utiliza el control de encendido o apagado disponible en su tarjeta o detalle.
-1. Espera el resultado de la solicitud. Si la aplicación indica que la orden fue publicada, interpreta ese estado como un envío, no como una confirmación eléctrica.
-1. Antes de manipular cualquier carga, comprueba el estado real del dispositivo y respeta las instrucciones de seguridad del fabricante.
+En **Avisos** o **Notificaciones**, revisa el mensaje, su relación con el hogar o dispositivo y las acciones disponibles. Un aviso no sustituye una revisión eléctrica profesional, y la ausencia de alertas tampoco garantiza que no haya riesgo.
 
-**Atención.** Una orden enviada puede demorarse o no llegar al equipo. No asumas que una carga eléctrica quedó desconectada únicamente por el estado visual de un botón en pantalla.
+Desde **Perfil** encontrarás funciones de sesión y opciones de preferencia cuando estén habilitadas, por ejemplo idioma o aspecto visual. Comprueba que cada cambio realmente se conserve antes de darlo por aplicado.
 
-## 7. Registro o vinculación Shelly
+## 9. Preguntas frecuentes
 
-Las versiones web y móvil contienen rutas y pantallas relacionadas con agregar dispositivos y detectar equipos compatibles. Sin embargo, la vinculación inicial completa de Shelly desde cero continúa limitada según la documentación técnica. La app móvil dispone de funciones BLE experimentales de detección y lectura de datos, no de emparejamiento definitivo.
+| Situación | Qué puedes hacer |
+|---|---|
+| No puedo entrar | Revisar credenciales, conexión y recuperación de cuenta |
+| No veo mi hogar | Comprobar usuario, membresía y hogar activo |
+| No puedo controlar un equipo | Revisar rol, conexión, estado y resultado de la orden |
+| No hay gráfica | Seleccionar hogar/período y confirmar que existen lecturas |
+| No aparece Shelly | Verificar entorno de prueba y consultar soporte |
+| No se habilita exportar | Confirmar que hay datos y que terminó la carga |
+| Recibo aviso de consumo | Revisar la información y tomar decisiones seguras |
 
-1. Abre la función Agregar dispositivo si está habilitada para tu rol y versión.
-1. Selecciona la modalidad autorizada por tu equipo (por ejemplo descubrimiento o búsqueda por IP, si está disponible).
-1. Sigue únicamente instrucciones específicas de tu entorno y modelo de Shelly.
-1. Si el dispositivo no aparece o la pantalla indica un modo experimental, no restablezcas credenciales ni reinicies el equipo para forzar el resultado.
-1. Comunica al responsable técnico el modelo, versión de app y mensaje mostrado, sin compartir claves o identificadores sensibles.
+## 10. Glosario para usuarios
 
-## 8. Consumo y energía
+| Término | Significado |
+|---|---|
+| Hogar | Espacio que agrupa personas, dispositivos y datos |
+| Dispositivo | Equipo registrado para consultar su estado o consumo |
+| Telemetría | Datos que envía un dispositivo al sistema |
+| MQTT | Tecnología de comunicación entre equipos y servicios |
+| Potencia (W) | Energía consumida por unidad de tiempo, instantánea |
+| Energía (kWh) | Electricidad acumulada durante un período |
+| Rol | Permisos asociados a una cuenta o un hogar |
 
-En el móvil, la pestaña Energía permite seleccionar el hogar, consultar información de consumo y cambiar entre apartados como Consumo y Planificación. En la web, el apartado de consumo se relaciona con el hogar seleccionado y presenta consultas y gráficos de valores energéticos cuando hay registros.
+## 11. Uso responsable y alcance real
 
-1. Selecciona el hogar cuyos datos quieres consultar.
-1. Entra en Energía en móvil o en Consumo desde el hogar en la web.
-1. Elige el período disponible: día, mes o año, según la interfaz.
-1. Observa los indicadores y gráficos con cuidado: kW/W y kWh representan cantidades distintas.
-1. Si no hay lecturas, revisa que el dispositivo esté registrado y que la fuente de telemetría esté disponible; evita interpretar ausencia de datos como consumo cero.
+No difundas claves ni capturas con datos personales. Nunca uses el estado de SmartHome como prueba suficiente de ausencia de tensión eléctrica. El equipo debe aportar capturas de una versión instalada y una demostración funcional antes de certificar el recorrido de este manual. No confundir prototipos antiguos con funcionamiento actual.
 
-### 8.1. Exportación de información desde Android
+## 12. Fuentes
 
-El código móvil incluye acciones para generar y compartir información de consumo en CSV y PDF. Las opciones están condicionadas a que exista un hogar seleccionado y datos válidos para el período. Si el botón está deshabilitado, revisa la selección y espera a que termine la carga antes de reintentar.
-
-## 9. Avisos y notificaciones
-
-1. Accede a Avisos en móvil o a Notificaciones en la web.
-1. Consulta el mensaje y su contexto: hogar, dispositivo o evento.
-1. Verifica los estados disponibles y utiliza las acciones que tu sesión permita.
-1. Si el aviso indica una situación eléctrica anómala, revisa el equipo con las medidas de seguridad apropiadas y solicita ayuda técnica cuando corresponda.
-
-Las notificaciones dependen de servicios y condiciones de generación configurados. Una ausencia de aviso no debe considerarse garantía de ausencia de riesgo eléctrico.
-
-## 10. Preferencias y perfil
-
-Desde Perfil se pueden encontrar opciones de sesión, preferencias y ajustes de interfaz. El alcance exacto varía entre web y móvil y entre versiones. En la documentación de la aplicación aparecen mecanismos para preferencias de idioma y tema; comprueba el resultado en la versión instalada antes de dar un cambio por guardado.
-
-## 11. Preguntas frecuentes y solución de inconvenientes
-
-| Situación | Qué hacer |
-| --- | --- |
-| No puedo iniciar sesión | Revisa correo y contraseña, conexión y estado de cuenta. Usa recuperación si olvidaste la clave. |
-| No aparece mi hogar | Confirma que entraste con la cuenta correcta y que tienes una membresía activa. |
-| No puedo encender un equipo | Verifica rol, conexión, estado del dispositivo y mensaje de la acción. No fuerces un relé manualmente. |
-| Los gráficos están vacíos | Selecciona hogar y período, espera la carga y verifica que existan lecturas. |
-| No aparece Shelly en la búsqueda | Comprueba versión de la app y entorno autorizado; la detección y pairing no están garantizados. |
-| No puedo exportar datos | Comprueba datos válidos, permisos y estado del botón en la pantalla de Energía. |
-| Recibo una alerta de consumo | Identifica el equipo y revisa las condiciones reales de uso antes de tomar decisiones. |
-
-## 12. Glosario breve
-
-| Término | Significado para el usuario |
-| --- | --- |
-| Hogar | Espacio principal que agrupa a las personas y dispositivos que consultas. |
-| Dispositivo | Equipo registrado que puede proporcionar estado, mediciones o capacidad de control. |
-| Potencia (W) | Energía que un equipo utiliza por unidad de tiempo; refleja demanda instantánea. |
-| Energía (kWh) | Cantidad acumulada de electricidad consumida a lo largo de un período. |
-| MQTT | Canal utilizado por el sistema para comunicar eventos y telemetría con equipos compatibles. |
-| Rol | Conjunto de permisos sobre una cuenta o un hogar. |
-| Telemetría | Datos que un dispositivo envía al sistema, por ejemplo potencia y estado. |
-
-## 13. Recomendaciones finales de uso seguro
-
-- No compartas contraseñas, códigos ni capturas con datos personales sin ocultar.
-- Comprueba siempre el hogar activo antes de operar un dispositivo.
-- No interpretes una orden enviada como confirmación de que la corriente está cortada.
-- Consulta soporte técnico si la app muestra errores de conexión persistentes.
-- Utiliza la aplicación para orientación y monitoreo; no como instrumento certificado para intervenir instalaciones eléctricas.
-
-## 14. Cierre
-
-Este manual pretende que cualquier usuario pueda recorrer SmartHome con claridad y sin conocimientos de programación. La interfaz orienta a consultar hogares, dispositivos y energía, mientras las acciones de control requieren permisos y conectividad. Para la entrega formal del producto deberá acompañarse de una sesión de uso real y capturas depuradas de la versión instalada, sin confundir los prototipos históricos con pruebas funcionales.
-
-## Fuentes y referencias verificables
-
-1. [Requisito institucional de los tres manuales](https://github.com/code-sena/ADSO-3145555/blob/main/04-final-delivery/02-smarthome/08-manuals/README.md)
-2. [SRS del proyecto](https://docs.google.com/document/d/1BYwKmODc6xmjVqJjOdBtK7t9KJr7vHnm/edit)
-3. [Código de rutas web](https://github.com/nataliachala1/smarthome-frontend-web/blob/dev/web/src/app/App.tsx)
-4. [Pantalla web de dispositivos](https://github.com/nataliachala1/smarthome-frontend-web/blob/dev/web/src/features/devices/pages/Devices.tsx)
-5. [Pantalla web de consumo](https://github.com/nataliachala1/smarthome-frontend-web/blob/dev/web/src/features/consumption/pages/Consumption.tsx)
-6. [Navegación móvil](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/blob/dev/app/(tabs)/(main)/_layout.tsx)
-7. [Pantalla móvil de energía](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/blob/dev/app/(tabs)/(main)/reports.tsx)
-8. [Guía BLE de la aplicación](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/blob/dev/docs/BLE_POC_ANDROID.md)
-9. [Manual histórico de usuario en Drive](https://docs.google.com/document/d/1S_XQNFJhlY7F5PMUAMU7unqSuzNCusJD/edit)
+- [Manual de usuario del PR #17](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/blob/final-delivery/smarthome-stiven-20261107/04-final-delivery/02-smarthome/08-manuals/end-user-manual.md)
+- [Frontend web](https://github.com/nataliachala1/smarthome-frontend-web)
+- [Frontend móvil](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil)
+- [Requisitos institucionales](https://github.com/code-sena/ADSO-3145555/blob/main/04-final-delivery/02-smarthome/08-manuals/README.md)

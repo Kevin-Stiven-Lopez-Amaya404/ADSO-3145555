@@ -1,87 +1,75 @@
-# Manual De Instalación
+# Manual de instalación — SmartHome
 
-**Proyecto:** SmartHome · **ADSO:** 3145555 · **Fecha:** 6 de noviembre de 2026
+**Servicio Nacional de Aprendizaje (SENA)**  
+**Programa:** Análisis y Desarrollo de Software · **Ficha:** 3145555  
+**Proyecto:** SmartHome · **Revisión documental:** 7 de noviembre de 2026  
+**Equipo:** Karen Daniela Holguín Cruz, Natalia Chala Chala y Kevin Stiven López Amaya  
+**Estado:** versión preparada para revisión académica; no publicada en el PR #17 ni aprobada por el instructor.
 
-**Elaborado por:** Natalia Chala Chala, Kevin Stiven López Amaya, Karen Daniela Holguín Cruz
+> **Control de versión.** Estos manuales parten de los tres Markdown de la rama `final-delivery/smarthome-stiven-20261107` del PR institucional #17 y se contrastaron con README y manifiestos `package.json` de las ramas `dev` accesibles el 7-11-2026. Son una referencia documental de desarrollo, no certificación de funcionamiento de una versión `main` etiquetada. No se ejecutaron instalaciones, pruebas Android ni operaciones eléctricas durante su elaboración.
 
----
 
-## 1. Objetivo y condiciones de uso
+## 1. Alcance y requisitos
 
-Este manual presenta una ruta de instalación local orientada a Windows y PowerShell, apropiada para desarrollo y pruebas académicas de SmartHome. Los pasos se basan en los README y archivos de configuración de los cuatro repositorios. No se ejecutaron contra los equipos del usuario al redactar el documento: deben aplicarse sobre un entorno de prueba autorizado.
+Este procedimiento corresponde a **instalación local en Windows PowerShell para desarrollo o evaluación**. No habilita despliegues de producción. No se ejecutaron estos comandos en un equipo del usuario durante la elaboración; cada responsable debe registrar capturas/logs, commit y resultado. El equipo debe aprobar las credenciales, permisos y entorno de destino.
 
-**Antes de ejecutar.** No reutilices contraseñas de manuales antiguos, no subas archivos .env a Git y no apliques migraciones a una base compartida sin respaldo, revisión y autorización.
+| Herramienta | Referencia | Propósito |
+|---|---|---|
+| Git | Versión funcional reciente | Clonar repositorios |
+| Node.js y npm | Node 22 utilizado en CI de backend/web | Ejecutar NestJS, Vite y Expo |
+| Docker + Compose | Compose v2 | PostgreSQL y Liquibase |
+| Android / Expo | Equipo autorizado; build nativa para BLE | Validación móvil |
+| PowerShell | Windows 10/11 | Comandos de ejemplo |
 
-## 2. Requisitos previos
+**Precaución de versiones:** `from_movil/dev/package.json` muestra Expo `~58.0.23` y React Native `0.88.1`; su README continúa describiendo Expo 57. Antes de compilar, comprobar `package-lock.json`, `eas.json`, CI y la rama real aprobada. No forzar migraciones de SDK por estas instrucciones.
 
-| Herramienta | Referencia verificable | Uso |
-| --- | --- | --- |
-| Git | Versión compatible con clonación HTTPS | Obtener y actualizar los repositorios. |
-| Node.js | 22, según los workflows actuales | Backend NestJS y clientes web/móvil. |
-| npm | Incluido con Node.js | Instalación reproducible mediante npm ci. |
-| Docker + Compose | Compatible con compose v2 | PostgreSQL local y Liquibase desde el repositorio DB. |
-| Android / Expo | Teléfono Android o emulador para pruebas; build nativo si se necesita BLE | Validación de app móvil. |
-| PowerShell | Windows 10/11 con comandos disponibles | Procedimiento de ejemplo en este manual. |
+## 2. Obtener los cuatro componentes
 
-El entorno de base de datos del compose local usa PostgreSQL 16 Alpine; las verificaciones CI de BD se han realizado también contra un entorno desechable PostgreSQL 18, que no debe confundirse con la configuración local.
-
-## 3. Organización del espacio de trabajo
-
-Crea una carpeta independiente para la solución. La aplicación web se ejecuta desde su subcarpeta web/, no desde la raíz del repositorio. La documentación central se conserva por separado y no es necesaria para arrancar los servicios.
+En una carpeta de trabajo nueva y autorizada:
 
 ```powershell
 New-Item -ItemType Directory -Force SmartHome | Out-Null
 Set-Location SmartHome
-
 git clone https://github.com/nataliachala1/smarthome-database.git
 git clone https://github.com/nataliachala1/smarthome-backend.git
 git clone https://github.com/nataliachala1/smarthome-frontend-web.git
 git clone https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil.git
 ```
 
-Selecciona la rama de trabajo acordada por el equipo y conserva su commit para reproducibilidad. No fuerces una mezcla entre dev, qa y main. Para revisar las ramas disponibles utiliza git branch -a y git log -1 --oneline.
+En cada repositorio, ejecutar `git branch -a` y `git log -1 --oneline`. El responsable debe indicar la rama y el SHA que serán evaluados. No mezclar `dev`, `qa` y `main` sin validar compatibilidad; no asumir que el tag de la carpeta institucional corresponde a esos commits.
 
-## 4. Base de datos y migraciones Liquibase
+## 3. PostgreSQL y migraciones
 
-La instalación local comienza por la base de datos. El archivo docker-compose.yml contiene el servicio postgres y un servicio liquibase bajo un perfil de herramientas. La cuenta que aplica el esquema no debe reutilizarse automáticamente como cuenta de ejecución del backend.
-
-### 4.1. Preparar configuración local
+Comenzar con una base local aislada. El `docker-compose.yml` del repositorio de BD utiliza PostgreSQL 16 Alpine en el entorno de desarrollo documentado. Proteger los volúmenes; `down -v` puede borrar los datos.
 
 ```powershell
 Set-Location smarthome-database
 Copy-Item .env.example .env
-# Edita .env para establecer una contraseña local segura.
+# Editar .env con valores LOCALES y una contraseña nueva.
 docker compose config
-```
-
-### 4.2. Iniciar PostgreSQL de desarrollo
-
-```powershell
 docker compose up -d --wait postgres
 docker compose ps
 ```
 
-Comprueba el estado healthy del contenedor y que el puerto definido en .env esté disponible. Si el volumen o el puerto pertenecen a otra instancia, detén el proceso y revisa: no borres datos ni volúmenes por ensayo y error.
-
-### 4.3. Revisar migraciones antes de aplicarlas
+Antes de aplicar cambios, comprobar el objetivo de conexión y revisar el SQL generado:
 
 ```powershell
 docker compose run --rm liquibase --defaults-file=liquibase.properties validate
 docker compose run --rm liquibase --defaults-file=liquibase.properties update-sql
 ```
 
-Revisa los cambios previstos y su destino. Solo en una base local de pruebas preparada para recibirlos, y con autorización del equipo, procede a aplicar el changelog:
+Solo si es una base local desechable, aprobada y respaldada cuando corresponda:
 
 ```powershell
-# Solo tras verificar destino y cambios:
+# Modifica la base de datos configurada: requiere autorizacion.
 docker compose run --rm liquibase --defaults-file=liquibase.properties update
 ```
 
-**Precaución.** update modifica la base configurada. No lo ejecutes en QA/producción desde un manual de clase. Los roles LOGIN operativos del backend deben aprovisionarse por procedimiento específico y con mínimo privilegio; el README de BD indica que los roles del esquema son principalmente NOLOGIN.
+**No usar credenciales propietarias de migración como credenciales normales del backend.** Revisar aprovisionamiento de roles LOGIN y políticas RLS siguiendo el README de BD. Nunca publicar `.env` ni capturas de contraseñas.
 
-## 5. Backend NestJS
+## 4. API NestJS
 
-El backend usa variables para PostgreSQL, JWT, CORS y servicios opcionales. La plantilla del repositorio es la referencia válida; no uses las contraseñas, IP o nombres de archivo que figuren en versiones históricas del manual.
+Desde la carpeta SmartHome creada en el paso 2:
 
 ```powershell
 Set-Location ..\smarthome-backend
@@ -90,22 +78,18 @@ npm ci
 npm run start:dev
 ```
 
-Antes de arrancar, adapta .env al entorno local real. DATABASE_URL y DATABASE_IOT_URL necesitan credenciales de LOGIN con los permisos correctos, no la cuenta propietaria del esquema. Mantén MQTT y pairing según el estado autorizado: la plantilla contiene opciones de laboratorio y varias protecciones de producción deshabilitadas. No actives opciones de producción sin validar broker TLS, políticas y migraciones.
+`npm ci` puede ejecutar `prisma generate` según el `package.json` del backend. Configurar valores locales reales de `DATABASE_URL`, `DATABASE_IOT_URL`, secretos JWT, `PORT`, CORS y opciones MQTT; no copiar contraseñas de documentos históricos. La API utiliza `/api/v1` y Swagger puede aparecer en `/api/docs` únicamente si está habilitado. Confirmar arranque y lectura de una ruta pública autorizada sin publicar tokens.
 
-| Variable o grupo | Propósito | Qué revisar |
-| --- | --- | --- |
-| PORT | Puerto de la API | Evitar conflicto con otros servicios. |
-| DATABASE_URL / DATABASE_IOT_URL | Acceso de aplicación e ingesta a PostgreSQL | Conexiones, roles y permisos correctos. |
-| JWT_SECRET / JWT_REFRESH_SECRET | Firma de sesiones | Valores propios fuera de Git. |
-| FRONTEND_URL / CORS_ALLOWED_ORIGINS | Navegadores autorizados | Concordancia con el origen de Vite. |
-| MQTT_ENABLED / MQTT_BROKER_URL | Comunicación IoT habilitada | Broker disponible y esquema de autenticación válido. |
-| SHELLY_* | Funciones específicas Shelly | No forzar pairing o control productivo en laboratorio. |
+| Grupo de variables | Uso |
+|---|---|
+| `DATABASE_URL`, `DATABASE_IOT_URL` | Cuentas limitadas de PostgreSQL para aplicación e ingesta |
+| `JWT_SECRET`, `JWT_REFRESH_SECRET` | Sesiones y tokens; mantener secretos fuera de Git |
+| `FRONTEND_URL`, `CORS_ALLOWED_ORIGINS` | Orígenes admitidos en web |
+| `MQTT_ENABLED`, `MQTT_BROKER_URL`, `SHELLY_*` | Integración IoT sujeta a entorno seguro |
 
-La API usa prefijo /api/v1. Cuando Swagger está habilitado, puede encontrarse en /api/docs. Para comprobar el backend, observa la consola de arranque, el código HTTP de una ruta pública documentada o Swagger, sin publicar tokens ni URLs privadas.
+## 5. Cliente web React y Vite
 
-## 6. Frontend web React/Vite
-
-El código de ejecución y las dependencias están dentro de web/. El README indica que VITE_BACKEND_URL controla el destino del proxy de Vite; por defecto se puede utilizar localhost:3000 si el navegador corre en el mismo equipo que el backend.
+Ejecutar desde **`web/`**, no desde la raíz del frontend:
 
 ```powershell
 Set-Location ..\smarthome-frontend-web\web
@@ -114,79 +98,71 @@ npm ci
 npm run dev
 ```
 
-Configura VITE_BACKEND_URL con la dirección real del backend y conserva VITE_API_URL como base relativa /api/v1 cuando corresponda a la configuración. Vite mostrará el puerto de escucha en consola (habitualmente 5173). Comprueba la carga de la vista /login y la respuesta a solicitudes del backend. Las variables VITE_* son visibles al cliente: no introduzcas secretos.
+En `web/.env.local`, `VITE_BACKEND_URL` indica el servidor de destino del proxy de desarrollo (ejemplo local: `http://localhost:3000`); `VITE_API_URL` suele ser `/api/v1`. La consola indica el puerto Vite (habitualmente 5173). Verificar `/login` y las solicitudes de la API. Las variables `VITE_*` **no son secretas**: pueden incluirse en el bundle del navegador.
 
-**No confundir entornos.** El docker-compose.yml de la raíz del repositorio web hace referencia a directorios externos no incluidos en un clon limpio. No ejecutes docker compose up --build allí esperando que funcione sin preparar esas rutas.
+El `docker-compose.yml` de la raíz web hace referencia a carpetas externas; no intentar ejecutar toda la pila desde un clon aislado sin preparar esas rutas. El README web documenta esta limitación.
 
-## 7. Aplicación móvil Expo
+## 6. Aplicación móvil Expo para Android
 
-La aplicación móvil tiene sus propias dependencias y archivo de entorno. La conexión hacia la API desde un teléfono físico requiere una dirección accesible desde el teléfono: localhost se refiere al teléfono mismo.
+Desde la carpeta de proyecto:
 
 ```powershell
 Set-Location ..\..\from_movil
 Copy-Item .env.example .env.local
 npm ci
+npm run lint
+npm run typecheck
 npx expo start --clear --lan
 ```
 
-En .env.local define EXPO_PUBLIC_API_URL con la URL completa de la API terminada en /api/v1 y accesible desde Android. Revisa Wi-Fi, firewall y el puerto real del backend. Para funciones BLE de Shelly, Expo Go puede ser insuficiente: se requiere un development build o APK con módulos nativos compatibles.
+Definir `EXPO_PUBLIC_API_URL` con la **URL completa accesible desde el teléfono**, terminada en `/api/v1`. Si la API funciona en el PC y el teléfono está en la misma LAN, utilizar la IP LAN real del PC; `localhost` en Android es el propio teléfono. Revisar Wi-Fi y firewall de manera autorizada.
 
-Los comandos EAS de compilación o actualización OTA no se ejecutan por el simple hecho de documentar la instalación: requieren configuración, perfil, canal, aprobación y una versión validada.
+Las funciones BLE requieren módulos nativos y pueden no funcionar en Expo Go. Emplear una Development Build o APK creada para el mismo SDK y commit que se está evaluando. No ejecutar comandos EAS de publicación OTA sin revisión, porque pueden actualizar una instalación existente.
 
-## 8. Verificaciones de calidad
+## 7. Comprobaciones antes de evaluar
 
-| Componente | Comandos de verificación | Resultado esperado |
-| --- | --- | --- |
-| Backend | npm run lint; npm test; npm run build | Validaciones y compilación sin errores. |
-| Web (desde web/) | npm run lint; npm run typecheck; npm run test:contracts; npm run build | Tipado, contratos y salida Vite válidos. |
-| Base de datos | docker compose run --rm liquibase ... validate | Changesets coherentes con el destino local. |
-| Móvil | npm run lint; npm run typecheck; npm run test:mobile-config; npm run test:navigation-auth | Config, navegación y chequeos de regresión aprobados. |
+| Componente | Comandos orientativos | Evidencia necesaria |
+|---|---|---|
+| API | `npm run lint`, `npm test`, `npm run build` | Ejecución, SHA y resultado |
+| Web en `web/` | `npm run lint`, `npm run typecheck`, `npm run test:contracts`, `npm run build` | Logs de build y consulta API |
+| DB | `liquibase validate` y `update-sql` | Destino y changelog validados |
+| Móvil | `npm run lint`, `npm run typecheck`, `npm run test:mobile-config`, `npm run test:navigation-auth` | Suite y compilación Android cuando aplique |
 
-También deben registrarse la fecha, el commit, la herramienta utilizada y el resultado observado. Un workflow en verde verifica sus propios pasos; no demuestra por sí mismo que el usuario pueda controlar un Shelly real.
+Los resultados CI históricos que figuran en el manual original no prueban funcionamiento del commit final, ni autorizan declarar seguro el APK. Registrar también una prueba real de inicio de sesión, consulta de hogar y, si se cuenta con dispositivo autorizado, telemetría Shelly.
 
-## 9. Comprobación funcional del entorno
+## 8. Solución de problemas
 
-1. Inicia PostgreSQL y comprueba que el contenedor esté listo.
-1. Confirma que las migraciones se validan y se aplican solo al destino aprobado.
-1. Levanta backend y revisa que no existan errores de conexión o configuración de JWT.
-1. Abre el cliente web y valida la pantalla de acceso y la comunicación HTTP.
-1. Abre la aplicación móvil y confirma que la URL de API configurada sea alcanzable desde Android.
-1. Solo con equipo físico autorizado, realiza una prueba separada de estado/telemetría Shelly; no confundir orden enviada con relé confirmado.
+| Problema | Comprobación |
+|---|---|
+| API no inicia | `.env`, PostgreSQL, puerto y permisos LOGIN/RLS |
+| Error de migración | `validate`, `update-sql`, rol y backup, sin destruir datos |
+| Web sin datos | `VITE_BACKEND_URL`, `VITE_API_URL`, proxy y CORS |
+| Android sin API | `EXPO_PUBLIC_API_URL`, LAN, firewall y puerto |
+| BLE no disponible | Verificar build nativa, versión de Expo y permisos |
+| Orden Shelly sin resultado | Contrastar respuesta API, MQTT y estado físico |
 
-## 10. Solución de problemas frecuentes
+## 9. Entrega y fuentes
 
-| Síntoma | Causa probable | Comprobación recomendada |
-| --- | --- | --- |
-| El backend no inicia | Variables insuficientes o PostgreSQL no disponible | Revisar .env, Docker y los logs de conexión. |
-| Errores RLS / acceso denegado | Cuenta LOGIN o contexto de autorización incorrecto | Verificar roles, membresías y políticas según repositorio DB. |
-| La web carga pero falla el API | VITE_BACKEND_URL, proxy o CORS incorrectos | Comprobar destino real y origen permitido. |
-| La app Android no conecta | EXPO_PUBLIC_API_URL apunta a localhost o red inaccesible | Usar una dirección LAN accesible, revisar firewall y puerto. |
-| No funciona BLE en Expo Go | Falta módulo nativo | Instalar development build compatible; no prometer pairing completo. |
-| No hay respuesta de Shelly | Dispositivo sin conexión, broker/credenciales o pairing pendiente | Comprobar conectividad y contrato sin compartir secretos. |
-| Error al migrar | Changelog o privilegios incompatibles | Detener operación, revisar update-sql y respaldo. |
+Se entrega un procedimiento reproducible **para ejecutar después con permiso**, no una constancia de instalación exitosa. Antes del tag final, adjuntar acta de instalación, commit, ambiente, comandos realmente ejecutados y resultados.
 
-## 11. Despliegue QA y producción: condiciones de seguridad
+- [Manual de instalación del PR #17](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/blob/final-delivery/smarthome-stiven-20261107/04-final-delivery/02-smarthome/08-manuals/installation-manual.md)
+- [README de BD](https://github.com/nataliachala1/smarthome-database/blob/dev/README.md)
+- [README backend](https://github.com/nataliachala1/smarthome-backend/blob/dev/README.md)
+- [README web](https://github.com/nataliachala1/smarthome-frontend-web/blob/dev/README.md)
+- [README móvil](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/blob/dev/README.md)
 
-Este manual documenta la instalación local. No constituye un procedimiento de despliegue productivo acreditado. La CI del frontend web permite validar y construir la imagen; su trabajo deploy está deshabilitado. El backend menciona despliegue Dokploy bajo condiciones propias. La base de datos exige respaldos y aprobación antes de ejecutar migraciones QA o productivas.
+## Anexo A. Registro de validación para completar durante la instalación
 
-- Nunca copiar un archivo .env local directamente a un repositorio.
-- Nunca publicar credenciales de demostración en documentos o capturas.
-- Evitar comandos destructivos de volúmenes (por ejemplo docker compose down -v) en un entorno con datos.
-- Conservar la evidencia del commit validado y de la versión etiquetada antes de la entrega.
-- Repetir las pruebas de integración después de cambiar el esquema o el contrato API.
+La siguiente tabla **no representa pruebas ejecutadas**. El responsable puede diligenciarla después de trabajar en un entorno autorizado y adjuntar logs o capturas depuradas.
 
-## 12. Conclusión
+| Paso | Commit o referencia | Resultado observado | Evidencia |
+|---|---|---|---|
+| Clonación de repositorios | Por registrar | Pendiente | Pendiente |
+| PostgreSQL saludable | Por registrar | Pendiente | Pendiente |
+| Liquibase validate/update-sql | Por registrar | Pendiente | Pendiente |
+| Backend y API | Por registrar | Pendiente | Pendiente |
+| Login web contra API | Por registrar | Pendiente | Pendiente |
+| Acceso Android a API | Por registrar | Pendiente | Pendiente |
+| Prueba Shelly física (si aplica) | Por registrar | Pendiente | Pendiente |
 
-La instalación de SmartHome requiere respetar el orden de dependencias: base de datos y roles de ejecución, backend, clientes web y móvil. El procedimiento anterior sustituye rutas y comandos genéricos de los manuales antiguos por referencias concretas de los repositorios actuales. Las verificaciones que dependan de credenciales, redes o hardware deberán ejecutarse en el ambiente aprobado y documentarse con evidencia.
-
-## Fuentes y referencias verificables
-
-1. [Guía institucional del producto 08](https://github.com/code-sena/ADSO-3145555/blob/main/04-final-delivery/02-smarthome/08-manuals/README.md)
-2. [Repositorio y README de base de datos](https://github.com/nataliachala1/smarthome-database/blob/dev/README.md)
-3. [Compose de base de datos](https://github.com/nataliachala1/smarthome-database/blob/dev/docker-compose.yml)
-4. [README del backend](https://github.com/nataliachala1/smarthome-backend/blob/dev/README.md)
-5. [Plantilla del backend](https://github.com/nataliachala1/smarthome-backend/blob/dev/.env.example)
-6. [README frontend web](https://github.com/nataliachala1/smarthome-frontend-web/blob/dev/README.md)
-7. [README frontend móvil](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/blob/dev/README.md)
-8. [Guía BLE de móvil](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/blob/dev/docs/BLE_POC_ANDROID.md)
-9. [Manual de instalación histórico en Drive](https://docs.google.com/document/d/1sYD9SispvHPIfnzInASyzVmcTEXtA5Ps/edit)
+**Criterio de cierre:** registrar fecha, entorno, versiones exactas, resultados y responsable, sin incorporar datos personales, tokens ni contraseñas en un repositorio público.
