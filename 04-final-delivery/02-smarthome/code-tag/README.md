@@ -13,7 +13,7 @@ Si falta alguno, agregue la fila. Si uno está vacío o ya no se usa, indíquelo
 | Componente | Repositorio original solicitado por el instructor | Estado verificado el 07-11-2026 | Acceso de `ariel5253` | SHA actual de `main` (NO tag final) | Tag `final-delivery-2026` | ZIP snapshot / export |
 |---|---|---|---|---|---|---|
 | Móvil | [from_movil](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil) | `main` existe, pero es histórico; rama por defecto `dev`, PR móvil pendiente | Read; cambiar a Write | `f1deb5331a07ef5` | **No creado** | Pendientes |
-| Documentación anterior | [smart-home-docs](https://github.com/Kevin-Stiven-Lopez-Amaya404/smart-home-docs) | Público; 1 archivo, repo histórico/no canónico | Read; cambiar a Write | `f4d1fe99db50007` | **No creado** | Pendientes |
+| Documentación anterior | [smart-home-docs](https://github.com/Kevin-Stiven-Lopez-Amaya404/smart-home-docs) | Público; repositorio histórico/no canónico; README actualizado con enlace explícito al canónico | Read; cambiar a Write | `ce8a6b5859ff7b` | **No creado** | Pendientes |
 | Base de datos anterior | [smart-home-database](https://github.com/nataliachala1/smart-home-database) | Público; README, sin modelo actual completo | No verificable desde integración; otorgar Write | `aa20de5230627f5` | **No creado** | Pendientes |
 | Backend | [smarthome-backend](https://github.com/nataliachala1/smarthome-backend) | Público; `main` protegida, pendiente de cierre técnico | No verificable desde integración; otorgar Write | `e5097116c603ea6` | **No creado** | Pendientes |
 | Frontend web | [smarthome-frontend-web](https://github.com/nataliachala1/smarthome-frontend-web) | Público; CI de `main` fallida | No verificable desde integración; otorgar Write | `daae7a411c0da21` | **No creado** | Pendientes |
@@ -57,3 +57,9 @@ No existe el tag `final-delivery-2026` en ninguno de los **cinco** repositorios 
 ## Accesos del instructor
 
 `ariel5253` debe tener **Write** en los cinco repositorios. Se verificó **Read** (insuficiente) en `from_movil` y `smart-home-docs`. Para las tres cuentas de Natalia, el conector no permitió consultar permisos (403); sus propietarios deben comprobarlo en **Settings → Collaborators and teams → Invite a collaborator**. No se han cambiado permisos de nadie mediante esta actualización documental.
+
+
+## Alineación posterior de repositorio documental y CI web
+
+- **Documentación:** el README de [`smart-home-docs`](https://github.com/Kevin-Stiven-Lopez-Amaya404/smart-home-docs) fue actualizado para señalar que el canónico es [`smart-home-doc`](https://github.com/Kevin-Stiven-Lopez-Amaya404/smart-home-doc). SHA de `main` de histórico después de esa aclaración: `ce8a6b5859ff7b6fcfee527d9007ee5089cad1ce`. **Este SHA no es una etiqueta final aprobada.**
+- **Frontend web:** se abrió [PR #7 de corrección de CI en el fork](https://github.com/Kevin-Stiven-Lopez-Amaya404/smarthome-frontend-web/pull/7), desde el SHA upstream `dev`, para resolver los dos nombres internos de backend durante el smoke. Falta ejecutar/aprobar el CI del PR, proponer la integración en el repositorio original y promover por `dev → qa → main`. El último `main` upstream sigue siendo `daae7a411c0da213ff078e9ae6fde67d9f29702b` y su CI falló; no generar tags de entrega sobre ese estado sin aceptación.
