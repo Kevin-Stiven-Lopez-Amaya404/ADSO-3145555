@@ -53,3 +53,8 @@ Este inventario consolida en el **PR #17** los archivos originalmente aportados 
 | Equipo audiovisual | Confirmar pitch 01–02 min y tutorial 03–05 min accesibles mediante enlaces lectores | Pendiente |
 
 **Release real:** [`final-delivery` publicado](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/releases/tag/final-delivery), todavía con un único Asset documental `SmartHome.zip`. No equivale a la entrega verificada de cinco repositorios.
+
+
+## Bloqueo CI web del upstream (7-11-2026)
+
+El [diagnóstico y hotfix reproducible](WEB-CI-BLOQUEO-Y-HOTFIX-2026-11-07.md) confirma que la CI de `main` del repositorio original falla al iniciar Nginx porque no resuelve el alias interno del backend. La misma corrección está validada en el fork, pero **no pudo abrirse PR en upstream por respuesta 403** de la integración. Natalia (o un colaborador con Write) debe aplicar el parche a una rama de `dev`, validar PR/QA y promover a `main` antes de etiquetar. No se ha fusionado ni modificado el repositorio original.
