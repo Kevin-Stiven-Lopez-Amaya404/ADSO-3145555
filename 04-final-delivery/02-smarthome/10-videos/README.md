@@ -30,7 +30,7 @@ A partir de las dos grabaciones originales se **generaron y verificaron por `ffp
 
 | Propuesta | Duración verificada | Enlace privado de revisión | Estado de evaluación |
 |---|---:|---|---|
-| Pitch promocional subtitulado (imágenes web+móvil, sin locución ni música) | **01:30 exactos** | [SmartHome_Pitch_Propuesto_01m30s.mp4](https://drive.google.com/file/d/1dpluMw6iZgSDOCwufbasQz56hRoLX-yf/view) | Archivo generado y subido, **sin aprobación** |
+| Pitch promocional subtitulado (imágenes web+móvil, sin locución ni música) | **01:30 exactos** | [SmartHome_Pitch_Propuesto_v2_01m30s.mp4](https://drive.google.com/file/d/1k4CZszu2KOS_gyIt1kTAstObvPRIE2Fz/view) | Archivo generado y subido, **sin aprobación** |
 | Tutorial web (fragmento continuo del video fuente, con audio original) | **04:45 exactos** | [SmartHome_Tutorial_Web_Propuesto_04m45s.mp4](https://drive.google.com/file/d/1KikggYTY1ozkMjHb2Inf7flc__lpSEkB/view) | Archivo generado y subido, **sin aprobación** |
 
 [Carpeta de revisión — acceso privado](https://drive.google.com/drive/folders/15-wEYwgt3zQ9FwHxA-GdMDi2s4WEPGmm).
