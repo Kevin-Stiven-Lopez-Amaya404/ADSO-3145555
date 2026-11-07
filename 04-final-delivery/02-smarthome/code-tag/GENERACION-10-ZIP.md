@@ -6,7 +6,7 @@
 
 - El [Release `final-delivery`](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/releases/tag/final-delivery) del fork está **publicado**, pero únicamente contiene el Asset documental `SmartHome.zip`.
 - No se encontró `final-delivery-2026` en ninguno de los cinco repositorios del instructor al revisar.
-- El `main` móvil (`f1deb5331a07ef51dae213a20aa48c2a52fe1027`) es histórico y requiere la aprobación de QA/Android físico.
+- El `main` móvil cambió a `d830ed08886618491ebba2429fd4ffd615ba75ea` tras fusionar PR #49; la [Mobile CI fue aprobada](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/actions/runs/42406563397), pero sigue pendiente la aceptación física Android/Shelly y la incidencia #42 continúa abierta.
 - El `main` web (`daae7a411c0da213ff078e9ae6fde67d9f29702b`) tuvo una [CI fallida](https://github.com/nataliachala1/smarthome-frontend-web/actions/runs/42114983557).
 - Por tanto, los cinco tags y diez ZIP **no están aprobados ni publicados**; no crear etiquetas sin congelar versiones válidas.
 
@@ -44,3 +44,8 @@ El instructor `ariel5253` necesita **Write** en los cinco repositorios. `from_mo
 Marcar esta sección como completa **únicamente** si hay cinco tags anotados que apuntan al `main` aprobado, diez ZIP descargables (cada uno con integridad verificada), diez SHA-256 registrados, revisión de CI/QA y acceso de escritura del instructor.
 
 **Comprobación local de la metodología (7 de noviembre de 2026):** la secuencia `git archive` + `git bundle --all` + restauración espejo fue probada con un repositorio de Git temporal con `main`, `dev` y un tag anotado, y sus tres referencias conservaron sus SHA. **Esta prueba no valida aún los cinco repositorios reales ni implica que sus tags hayan sido creados.**
+
+
+## Actualización de precheck y generador (7 de noviembre de 2026)
+
+Se preparó un generador PowerShell descargable para el equipo, con modo `Check` de solo lectura y modo `Build -PublishTags` que requiere aprobación explícita de cada SHA. La restauración de `git bundle --all`, las referencias y el ZIP snapshot se probaron con un repositorio Git de laboratorio, no con los cinco repos reales. Consulte el [precheck actualizado](PRECHECK-2026-11-07.md). **No se publicaron tags ni se crearon los diez ZIP exigidos.**
