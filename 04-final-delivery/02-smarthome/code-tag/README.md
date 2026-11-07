@@ -63,3 +63,8 @@ No existe el tag `final-delivery-2026` en ninguno de los **cinco** repositorios 
 
 - **Documentación:** el README de [`smart-home-docs`](https://github.com/Kevin-Stiven-Lopez-Amaya404/smart-home-docs) fue actualizado para señalar que el canónico es [`smart-home-doc`](https://github.com/Kevin-Stiven-Lopez-Amaya404/smart-home-doc). SHA de `main` de histórico después de esa aclaración: `ce8a6b5859ff7b6fcfee527d9007ee5089cad1ce`. **Este SHA no es una etiqueta final aprobada.**
 - **Frontend web:** el [PR #7 de corrección de CI](https://github.com/Kevin-Stiven-Lopez-Amaya404/smarthome-frontend-web/pull/7) se **fusionó en `dev` del fork** (commit `9928217825c79cf8150b0dd97ce2937c1d95603d`), con [workflow #42395316954 aprobado](https://github.com/Kevin-Stiven-Lopez-Amaya404/smarthome-frontend-web/actions/runs/42395316954). Los intentos de abrir PR hacia `nataliachala1/smarthome-frontend-web:dev` fueron rechazados con 403. **Natalia debe proponer/integrar esa corrección al repo original, revisar CI propia y promover por `dev → qa → main` antes del tag.** El último `main` upstream sigue siendo `daae7a411c0da213ff078e9ae6fde67d9f29702b` y su CI falló; no generar tags de entrega sobre ese estado sin aceptación.
+
+
+### Evidencia adicional de la integración web (7 nov 2026)
+
+La CI de la rama `dev` **ya integrada en el fork** también concluyó **SUCCESS**: [workflow #42395677610](https://github.com/Kevin-Stiven-Lopez-Amaya404/smarthome-frontend-web/actions/runs/42395677610), commit `9928217825c79cf8150b0dd97ce2937c1d95603d`. Esta es evidencia adicional de la corrección del smoke. **No sustituye la CI de `main` en `nataliachala1/smarthome-frontend-web`**, donde el cambio aún no ha sido promovido.
