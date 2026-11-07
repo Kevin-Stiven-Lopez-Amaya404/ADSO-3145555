@@ -1,11 +1,17 @@
-# SmartHome — Referencias de los dos videos de entrega
+# Videos de entrega — SmartHome (ADSO 3145555)
 
-**Pitch publicitario (se exige de 1 a 2 minutos)**  
-https://drive.google.com/file/d/1tHwTE0U6y-zqq21HLuVf-DWIkSUkGD4H/view
+**Verificación de duración con los archivos MP4 originales: 7 de noviembre de 2026.**
 
-**Tutorial de uso (se exige de 3 a 5 minutos)**  
-https://drive.google.com/file/d/1pvq5EGWSaJiv56x05SOM9AKqc26S-I00/view
+| Grabación consultada | Contenido observado | Duración exacta (redondeada) | Enlace | Resultado frente a la guía |
+|---|---|---|---|---|
+| Aplicativo webPM.mp4 | Demostración del panel web, hogares, dispositivos y configuración | **06:29** | [Ver en Drive](https://drive.google.com/file/d/1tHwTE0U6y-zqq21HLuVf-DWIkSUkGD4H/view) | **Fuera del rango** para tutorial (03:00–05:00) |
+| WhatsApp Video 2026-11-05 at 7.38.09 PM.mp4 | Recorrido por pantallas de la aplicación móvil Android | **10:05** | [Ver en Drive](https://drive.google.com/file/d/1pvq5EGWSaJiv56x05SOM9AKqc26S-I00/view) | **Fuera del rango** para tutorial (03:00–05:00) |
 
-**Estado:** enlaces identificados en la carpeta de Drive de SmartHome. No se han verificado aquí la duración, el acceso anónimo o si corresponden al funcionamiento definitivo del código; deben revisarse antes de marcarlos como entregados.
+## Videos exigidos por el instructor
 
-Los videos no se incluyen directamente en el ZIP de documentación; el repositorio institucional solicita enlaces de Drive.
+- **Pitch publicitario: 01:00 a 02:00.** Ninguna de estas dos grabaciones se ha identificado ni validado como pitch comercial completo. **Pendiente de aportar video apto y comprobar su duración.**
+- **Tutorial de uso: 03:00 a 05:00.** Hay grabaciones de demostración de web y móvil, pero ambas superan la duración máxima. **Pendiente de aportar una versión resumida que explique inicio de sesión, flujo principal y resultado sin datos personales.**
+
+Los permisos mostrados para los dos MP4 son acceso por enlace con rol `writer`, superior al necesario. Por seguridad, el propietario debería configurar **Cualquier persona con el enlace → Lector** y probar los enlaces en navegación privada. Esto no se ha modificado automáticamente.
+
+**No marcar los videos como completados hasta que cumplan tiempos, contenido y visibilidad.**
