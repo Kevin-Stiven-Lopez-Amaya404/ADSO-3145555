@@ -62,3 +62,8 @@ El GitHub Release del fork ya está publicado con un ZIP de documentación. Los 
 ### Advertencia administrativa
 
 La preparación de un ZIP, un script o una prueba CI en un fork **no son prueba de la entrega final de `main` de cada repositorio**. Para cumplir el requisito de registro del software deben identificarse SHA aprobados, tags anotados, diez ZIP de snapshot y exportación completa, hashes SHA-256 auténticos y enlaces de Asset descargables. Las autorizaciones de datos y declaraciones legales deben ser voluntarias y verificadas por los integrantes.
+
+
+### Progreso de los videos exigidos — propuestas sin aprobación
+
+Se elaboraron y subieron a una carpeta privada de Google Drive dos **propuestas de evaluación** derivadas del material original: un pitch de **01:30** y un tutorial web de **04:45**; sus duraciones exactas se validaron con `ffprobe`. Están enlazadas y descritas en [10-videos/video-links.md](10-videos/video-links.md). La carpeta no tiene permiso público `anyone`, por lo que **siguen pendientes** revisión audiovisual y de datos personales, posibles ajustes editoriales, habilitar `Cualquier persona con el enlace → Lector` y comprobar acceso anónimo antes de presentar estos enlaces como definitivos. Se conserva el historial de videos originales 06:29 y 10:05.
