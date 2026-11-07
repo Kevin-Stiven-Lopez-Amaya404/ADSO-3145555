@@ -46,3 +46,19 @@ El GitHub Release del fork ya está publicado con un ZIP de documentación. Los 
 - El [Release `final-delivery`](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/releases/tag/final-delivery) **ya está publicado**, con un Asset documental. Su descripción y Assets deben actualizarse con los paquetes de código verificables antes de considerarlo final.
 
 **No confundir documento enviado, archivo disponible, PR aprobado y Release técnico validado: son estados distintos.**
+
+
+## Verificación de integración y aceptación — cierre de revisión
+
+**Comprobación de GitHub del 7 de noviembre de 2026:**
+
+- [PR institucional #17](https://github.com/code-sena/ADSO-3145555/pull/17): **OPEN**, **mergeable: clean**. Puede ser revisado por el mantenedor, pero todavía **no está fusionado**.
+- [PR institucional #13](https://github.com/code-sena/ADSO-3145555/pull/13): **OPEN**; sus archivos están incorporados al #17, pero debe cerrarlo su autora. Un intento de cierre con la cuenta conectada fue rechazado con **403**.
+- [PR móvil #61](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/pull/61): **DRAFT**, clean, pruebas automáticas de CI aprobadas en el candidato SDK 58. **No equivale a aceptación física Android**.
+- [PR móvil #49](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/pull/49): **DRAFT**, estado de integración unstable, aún no aprobado para `main`.
+- [PR #7 web en el fork](https://github.com/Kevin-Stiven-Lopez-Amaya404/smarthome-frontend-web/pull/7): **MERGED** en `dev` de la copia, commit `9928217825c79cf8150b0dd97ce2937c1d95603d`; [CI antes](https://github.com/Kevin-Stiven-Lopez-Amaya404/smarthome-frontend-web/actions/runs/42395316954) y [después](https://github.com/Kevin-Stiven-Lopez-Amaya404/smarthome-frontend-web/actions/runs/42395677610) de fusionar: **SUCCESS**. La corrección **no está integrada en el upstream web**.
+- [Release documental del fork](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/releases/tag/final-delivery): publicado, con **un solo Asset `SmartHome.zip`**. El instructor solicita dos ZIP por cada uno de cinco repositorios, que siguen pendientes.
+
+### Advertencia administrativa
+
+La preparación de un ZIP, un script o una prueba CI en un fork **no son prueba de la entrega final de `main` de cada repositorio**. Para cumplir el requisito de registro del software deben identificarse SHA aprobados, tags anotados, diez ZIP de snapshot y exportación completa, hashes SHA-256 auténticos y enlaces de Asset descargables. Las autorizaciones de datos y declaraciones legales deben ser voluntarias y verificadas por los integrantes.
