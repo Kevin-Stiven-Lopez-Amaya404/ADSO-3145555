@@ -15,3 +15,14 @@
 Los permisos mostrados para los dos MP4 son acceso por enlace con rol `writer`, superior al necesario. Por seguridad, el propietario debería configurar **Cualquier persona con el enlace → Lector** y probar los enlaces en navegación privada. Esto no se ha modificado automáticamente.
 
 **No marcar los videos como completados hasta que cumplan tiempos, contenido y visibilidad.**
+
+## Propuestas editadas para evaluación (no publicadas)
+
+Se prepararon a partir de las grabaciones originales dos archivos para revisión del equipo:
+
+| Tipo propuesto | Archivo provisional | Duración verificada | Estado |
+|---|---|---:|---|
+| Pitch | `SmartHome_Pitch_Propuesto_01m30s.mp4` | **01:30** | Archivo local entregado para revisión, falta publicar en Drive y comprobar que comunique el pitch |
+| Tutorial | `SmartHome_Tutorial_Web_Propuesto_04m45s.mp4` | **04:45** | Extracto de grabación web, falta revisión de pasos/privacidad, publicar en Drive |
+
+Los dos MP4 se distribuyen como `SmartHome_Videos_Cortos.zip`. **No se ha añadido un enlace de Drive definitivo, no se declaran aprobados y no deben marcarse las casillas como cumplidas sin validación.**
