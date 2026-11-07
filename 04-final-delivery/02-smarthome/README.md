@@ -100,5 +100,5 @@ Carpeta de fuentes documentales: https://drive.google.com/drive/folders/1FI2E_qA
 - **[PR #17](https://github.com/code-sena/ADSO-3145555/pull/17):** entrega documental consolidada para revisión; todavía requiere aprobación institucional.
 - **[PR #13](https://github.com/code-sena/ADSO-3145555/pull/13):** aportes incorporados al #17; pendiente de que Daniela verifique y cierre su PR sin fusionarlo.
 - **[PR #5](https://github.com/code-sena/ADSO-3145555/pull/5):** cerrado sin fusionar porque sus 546 archivos pertenecían a carpetas ajenas al alcance final de SmartHome.
-- **[Auditoría de permisos Drive](AUDITORIA-ACCESO-DRIVE.md):** carpeta y archivos fuente con `anyone: writer`; cambiar a `Cualquier persona con el enlace → Lector` y probar anónimamente.
+- **[Auditoría de permisos Drive](AUDITORIA-ACCESO-DRIVE.md):** revisar en privado los accesos; configurar `Cualquier persona con el enlace → Lector` y probar anónimamente.
 - **[Respuesta a las 14 correcciones](RESPUESTA-14-CORRECCIONES-INSTRUCTOR.md):** separa lo preparado de lo que requiere aceptación o acción del propietario.
