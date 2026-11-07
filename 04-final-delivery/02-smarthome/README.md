@@ -14,8 +14,8 @@ Final delivery of the training project / Entrega final del proyecto formativo.
 | Process / Proceso | Completion of the technologist taught stage / Finalización de la etapa lectiva del tecnólogo |
 | Research seedbed / Semillero de investigación | Developers & Geeks |
 | Delivery version / Versión entregada | `final-delivery-2026` |
-| Delivery date / Fecha de entrega | |
-| Delivered by / Entregado por | |
+| Delivery date / Fecha de entrega | 2026-11-07 (preparación; confirmar fecha de publicación) |
+| Delivered by / Entregado por | Kevin Stiven López Amaya (fork de entrega) |
 
 ## Summary / Resumen
 
@@ -50,9 +50,9 @@ Final delivery of the training project / Entrega final del proyecto formativo.
 
 | Full name / Nombre completo | Doc. type / Tipo | Doc. number / Número | Ficha | GitHub user / Usuario | Role / Rol | Verified and authorized / Verificado y autorizado |
 |---|---|---|---|---|---|---|
-| KAREN DANIELA HOLGUIN CRUZ | CC | 1079176743 | 3145555 | Karendaniela09 | | ☐ |
-| NATALIA CHALA CHALA | CC | 1075508373 | 3145555 | nataliachala1 | | ☐ |
-| KEVIN STIVEN LOPEZ AMAYA | CC | 1077724241 | 3145555 |  | | ☐ |
+| KAREN DANIELA HOLGUIN CRUZ | CC | 1079176743 | 3145555 | Karendaniela09 | PostgreSQL/Liquibase y documentación (por ratificar) | ☐ |
+| NATALIA CHALA CHALA | CC | 1075508373 | 3145555 | nataliachala1 | Infraestructura y despliegue Docker (por ratificar) | ☐ |
+| KEVIN STIVEN LOPEZ AMAYA | CC | 1077724241 | 3145555 | Kevin-Stiven-Lopez-Amaya404 | Backend NestJS/MQTT y documentación técnica (por ratificar) | ☐ |
 
 Data use authorization: by checking the box, the member confirms their data and authorizes publishing their name, document number and ficha in this public repository, for the software registration process (Ley 1581 de 2012). Anyone who does not authorize it tells the instructor before delivering.
 
@@ -85,3 +85,11 @@ Aquí solo van archivos demasiado pesados para GitHub, como videos de demostraci
 | File / Archivo | Size / Tamaño | Link / Enlace |
 |---|---|---|
 | | | |
+
+## Autorizaciones y entrega técnica pendientes
+
+Las casillas «Verificado y autorizado» de los tres integrantes **siguen desmarcadas**. Cada persona debe autorizar individualmente la publicación de sus datos y verificar los roles antes de aprobar el registro. No se ha marcado consentimiento en nombre de terceros.
+
+Los PDF académicos de las secciones 01, 02, 04, 05, 06 y 09 están incorporados a la rama del PR #17. Los tags/ZIP de código requieren aprobación y generación verificable; la documentación no sustituye los artefactos del software.
+
+Carpeta de fuentes documentales: https://drive.google.com/drive/folders/1FI2E_qAiMVAG1lDXIPhSyPoFF3Pc8ndQ
