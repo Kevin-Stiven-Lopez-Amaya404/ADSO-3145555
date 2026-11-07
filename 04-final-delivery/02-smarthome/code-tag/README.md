@@ -12,7 +12,7 @@ Si falta alguno, agregue la fila. Si uno está vacío o ya no se usa, indíquelo
 
 | Componente | Repositorio original solicitado por el instructor | Estado verificado el 07-11-2026 | Acceso de `ariel5253` | SHA actual de `main` (NO tag final) | Tag `final-delivery-2026` | ZIP snapshot / export |
 |---|---|---|---|---|---|---|
-| Móvil | [from_movil](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil) | `main` existe, pero es histórico; rama por defecto `dev`, PR móvil pendiente | Read; cambiar a Write | `f1deb5331a07ef5` | **No creado** | Pendientes |
+| Móvil | [from_movil](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil) | `main` actualizado por PR #49 (fusionado), CI móvil aprobada 07-11-2026; pendiente aceptación física Android/Shelly | Read; cambiar a Write | `d830ed08886618` | **No creado** | Pendientes |
 | Documentación anterior | [smart-home-docs](https://github.com/Kevin-Stiven-Lopez-Amaya404/smart-home-docs) | Público; repositorio histórico/no canónico; README actualizado con enlace explícito al canónico | Read; cambiar a Write | `ce8a6b5859ff7b` | **No creado** | Pendientes |
 | Base de datos anterior | [smart-home-database](https://github.com/nataliachala1/smart-home-database) | Público; README, sin modelo actual completo | No verificable desde integración; otorgar Write | `aa20de5230627f5` | **No creado** | Pendientes |
 | Backend | [smarthome-backend](https://github.com/nataliachala1/smarthome-backend) | Público; `main` protegida, pendiente de cierre técnico | No verificable desde integración; otorgar Write | `e5097116c603ea6` | **No creado** | Pendientes |
@@ -68,3 +68,8 @@ No existe el tag `final-delivery-2026` en ninguno de los **cinco** repositorios 
 ### Evidencia adicional de la integración web (7 nov 2026)
 
 La CI de la rama `dev` **ya integrada en el fork** también concluyó **SUCCESS**: [workflow #42395677610](https://github.com/Kevin-Stiven-Lopez-Amaya404/smarthome-frontend-web/actions/runs/42395677610), commit `9928217825c79cf8150b0dd97ce2937c1d95603d`. Esta es evidencia adicional de la corrección del smoke. **No sustituye la CI de `main` en `nataliachala1/smarthome-frontend-web`**, donde el cambio aún no ha sido promovido.
+
+
+## Precheck actualizado de repositorios (7 nov 2026)
+
+El estado consultado de `main`, tags y CI se registra en [PRECHECK-2026-11-07.md](PRECHECK-2026-11-07.md). **Móvil avanzó:** PR #61 y #49 fusionados, `main` en `d830ed08886618491ebba2429fd4ffd615ba75ea`, CI [aprobada](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/actions/runs/42406563397); pruebas físicas e incidencia #42 pendientes. El `main` upstream web sigue con CI fallida. No se publicaron tags ni diez ZIP. Existe un generador local de PowerShell **para ejecutar solo con aprobación** del equipo; no es evidencia de entrega.
