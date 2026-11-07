@@ -36,3 +36,8 @@ A partir de las dos grabaciones originales se **generaron y verificaron por `ffp
 [Carpeta de revisión — acceso privado](https://drive.google.com/drive/folders/15-wEYwgt3zQ9FwHxA-GdMDi2s4WEPGmm).
 
 **Permisos confirmados:** la carpeta y los MP4 **no tienen acceso público**. Antes de enviarlos como videos finales, el equipo debe (1) revisar íntegramente contenido y privacidad, (2) confirmar si el pitch necesita locución y si el tutorial explica el flujo completo, (3) configurar **Cualquier persona con el enlace → Lector**, (4) comprobar ambos enlaces desde incógnito y (5) registrar aprobación en esta carpeta. Hasta entonces **no marcar los dos videos como entregados ni conformes**. Los originales 06:29 y 10:05 continúan disponibles para referencia.
+
+
+## Revisión de privacidad (7 de noviembre de 2026)
+
+Las dos propuestas privadas de Drive cumplen la duración: pitch **01:30** y tutorial **04:45**, comprobados con ffprobe. En fotogramas examinados se hallaron nombre de cuenta, sugerencia de correo personal e identificadores de invitaciones. Se elaboraron **copias locales para revisión con ocultaciones visuales**, sin reemplazar los archivos privados de Drive. El tutorial conserva audio original **pendiente de revisión integral**. El pitch es visual y no incluye locución. No deben declararse listos hasta comprobar íntegramente privacidad, claridad del contenido, aprobación del equipo y acceso anónimo de lector. Véase [informe de revisión](revision-privacidad-2026-11-07.md).
