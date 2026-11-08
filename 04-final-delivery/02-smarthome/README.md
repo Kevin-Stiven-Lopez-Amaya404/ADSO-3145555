@@ -44,19 +44,19 @@ Final delivery of the training project / Entrega final del proyecto formativo.
 - *Demo credentials / Credenciales de prueba:* Pendiente de confirmar. No publicar contraseñas reales.
 ## Team members / Integrantes
 
-> Names and document numbers were preloaded by the instructor from the Sofía Plus report. Each member checks their row, completes GitHub user and role, and marks the last column. Report any error, missing member or extra member to the instructor.
+> Names and document types were preloaded from the instructor's roster. Full identification numbers are withheld from this public version pending individual authorization and should be supplied only via the instructor's private registration channel. Each member must verify their row, GitHub account and role.
 >
-> Los nombres y documentos los precargó el instructor desde el reporte de Sofía Plus. Cada integrante revisa su fila, completa usuario de GitHub y rol, y marca la última columna. Reporte al instructor cualquier error, o si falta o sobra alguien.
+> Los nombres y tipos de documento proceden de la plantilla del instructor. Los números completos se reservan en esta versión pública hasta confirmar autorización individual y deben entregarse por el canal privado del registro. Cada integrante verifica su fila, usuario de GitHub y rol, y reporta errores al instructor.
 
 | Full name / Nombre completo | Doc. type / Tipo | Doc. number / Número | Ficha | GitHub user / Usuario | Role / Rol | Verified and authorized / Verificado y autorizado |
 |---|---|---|---|---|---|---|
-| KAREN DANIELA HOLGUIN CRUZ | CC | 1079176743 | 3145555 | Karendaniela09 | PostgreSQL/Liquibase y documentación (por ratificar) | ☐ |
-| NATALIA CHALA CHALA | CC | 1075508373 | 3145555 | nataliachala1 | Infraestructura y despliegue Docker (por ratificar) | ☐ |
-| KEVIN STIVEN LOPEZ AMAYA | CC | 1077724241 | 3145555 | Kevin-Stiven-Lopez-Amaya404 | Backend NestJS/MQTT y documentación técnica (por ratificar) | ☐ |
+| KAREN DANIELA HOLGUIN CRUZ | CC | Reservado — canal privado | 3145555 | Karendaniela09 | PostgreSQL/Liquibase y documentación (por ratificar) | ☐ |
+| NATALIA CHALA CHALA | CC | Reservado — canal privado | 3145555 | nataliachala1 | Infraestructura y despliegue Docker (por ratificar) | ☐ |
+| KEVIN STIVEN LOPEZ AMAYA | CC | Reservado — canal privado | 3145555 | Kevin-Stiven-Lopez-Amaya404 | Backend NestJS/MQTT y documentación técnica (por ratificar) | ☐ |
 
-Data use authorization: by checking the box, the member confirms their data and authorizes publishing their name, document number and ficha in this public repository, for the software registration process (Ley 1581 de 2012). Anyone who does not authorize it tells the instructor before delivering.
+Privacy and data verification: the unchecked boxes do not constitute consent. Full identification numbers are not to be included in the public README; the official registration form, if applicable, is completed through an authorized private channel. Refer to the privacy protocol linked below.
 
-Autorización de datos: al marcar la casilla, el integrante confirma sus datos y autoriza publicar su nombre, número de documento y ficha en este repositorio público, para el trámite de registro de software (Ley 1581 de 2012). Quien no lo autorice se lo informa al instructor antes de entregar.
+Verificación de datos: las casillas sin marcar no implican autorización. Los números completos de identificación no se incluyen en este README público; los datos necesarios para el trámite oficial se entregan por un canal privado autorizado. Consultar el protocolo de privacidad enlazado abajo.
 
 ## Delivery contents / Contenido de la entrega
 
@@ -107,3 +107,6 @@ Carpeta de fuentes documentales: https://drive.google.com/drive/folders/1FI2E_qA
 ## Handoff de cierre al instructor — estado actualizado
 
 Ver [control de cierre y aceptación](CIERRE-DOCUMENTAL-Y-ACEPTACION-2026-11-07.md). El PR #17 contiene los PDF de las secciones 01–09 (incluidos 3 manuales de 08) y evidencia QA documental; **no se ha fusionado**, y el PR #13 continúa abierto para cierre sin merge por su autora. El móvil tiene Expo SDK 58 integrado en `main` y CI automatizada aprobada, pero pruebas físicas Android/Shelly y autorización de producción pendientes. El Release conserva un único ZIP documental; cinco tags y diez ZIP de código siguen pendientes. **Antes de publicar o fusionar**, el instructor y cada integrante deben revisar las autorizaciones no marcadas y la presencia de números de identificación precargados en documentación pública; no se considera otorgado consentimiento por defecto.
+
+
+**Protección de datos para revisión del instructor:** [protocolo de privacidad, consentimientos y registro](PROTOCOLO-PRIVACIDAD-Y-AUTORIZACIONES-2026-11-07.md). Los números de identificación se reservaron en esta versión pública; ello **no elimina** versiones anteriores de Git ni corrige automáticamente otras copias existentes. Revisar con los titulares antes de fusionar.
