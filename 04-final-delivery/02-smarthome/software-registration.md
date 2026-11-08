@@ -75,10 +75,10 @@ The following is the instructor's provisional author/contributor list and must b
 
 | Declaration / Declaración | Option / Opción |
 |---|---|
-| Origin / Origen | ☐ Original ☐ Derived work / Obra derivada. Dato técnico: el código es del equipo y usa librerías de terceros sin modificarlas (sección 8); la interfaz web partió de un prototipo de Figma Make con componentes shadcn/ui. La casilla la marcan los autores. |
+| Origin / Origen | ☑ Original ☐ Derived work / Obra derivada. Dato técnico: el código es del equipo y usa librerías de terceros sin modificarlas (sección 8); la interfaz web partió de un prototipo de Figma Make con componentes shadcn/ui. Decisión del equipo en el PR #17. |
 | If derived, base work / Si es derivada, obra de base | Si se declara derivada: prototipo de interfaz generado con Figma Make (2026-09) y componentes shadcn/ui (MIT). |
-| Type of work / Clase de obra | ☐ Individual ☐ In collaboration / En colaboración ☐ Collective / Colectiva ☐ Anonymous / Anónima ☐ Pseudonymous / Seudónima ☐ Posthumous / Póstuma. Dato técnico: tres aprendices con commits en los mismos repositorios. La casilla la marcan los autores. |
-| Publication / Publicación | ☐ Unpublished / Inédita ☐ Published / Publicada. Dato técnico: el código está en repositorios públicos de GitHub. La declaración la define el Centro. |
+| Type of work / Clase de obra | ☐ Individual ☑ In collaboration / En colaboración ☐ Collective / Colectiva ☐ Anonymous / Anónima ☐ Pseudonymous / Seudónima ☐ Posthumous / Póstuma. Dato técnico: tres aprendices con commits en los mismos repositorios. Decisión del equipo en el PR #17. |
+| Publication / Publicación | ☐ Unpublished / Inédita ☑ Published / Publicada. Dato técnico: el código está en repositorios públicos de GitHub. Decisión del equipo en el PR #17; el Centro puede revisarla. |
 | If published, date and place / Si está publicada, fecha y lugar | GitHub (github.com/nataliachala1 y github.com/Kevin-Stiven-Lopez-Amaya404); primer commit público: 2026-06-26. |
 
 Software is treated as unpublished unless the rights holder states otherwise (art. 4). A public repository may count as publication: the team records it here, and the Centro decides the final declaration.
@@ -142,16 +142,20 @@ La lista completa de dependencias, con su versión exacta, está en el `package-
 
 ## 10. Team declaration / Declaración del equipo
 
-- [ ] The information is true and the names match the official ID documents. / La información es veraz y los nombres coinciden con los documentos de identidad.
-- [ ] The listed authors are the people who created the software. / Los autores relacionados son quienes crearon el software.
-- [ ] Third-party components are declared. / Los componentes de terceros están declarados.
-- [ ] No passwords, tokens or keys are included. / No se incluyen contraseñas, tokens ni llaves.
+- [x] The information is true and the names match the official ID documents. / La información es veraz y los nombres coinciden con los documentos de identidad.
+- [x] The listed authors are the people who created the software. / Los autores relacionados son quienes crearon el software.
+- [x] Third-party components are declared. / Los componentes de terceros están declarados.
+- [x] No passwords, tokens or keys are included. / No se incluyen contraseñas, tokens ni llaves.
 
+
+## Decisiones y confirmaciones del equipo
+
+- **Sección 6:** decisión registrada por el equipo en el [PR #17](https://github.com/code-sena/ADSO-3145555/pull/17) el 2026-11-08: Original, en colaboración, publicada.
+- **Sección 10:** confirmada por los tres aprendices en sus comentarios del [PR #17](https://github.com/code-sena/ADSO-3145555/pull/17) (Karen, Natalia y Kevin, 2026-11-08).
 
 ## Qué falta y quién lo hace
 
 - Sección 1 (solicitante): la define el instructor líder con el Centro.
-- Secciones 6 y 10: cada autor marca sus casillas. Los datos técnicos ya están escritos al lado de cada opción.
 - Sección 9: cada integrante entrega sus datos privados por el canal que indique el instructor.
 
 Los números de documento no se publican aquí. Ver el [protocolo de privacidad](PROTOCOLO-PRIVACIDAD-Y-AUTORIZACIONES-2026-11-07.md).

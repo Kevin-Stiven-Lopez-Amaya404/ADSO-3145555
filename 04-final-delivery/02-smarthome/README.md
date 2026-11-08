@@ -52,7 +52,7 @@ Final delivery of the training project / Entrega final del proyecto formativo.
 |---|---|---|---|---|---|---|
 | KAREN DANIELA HOLGUIN CRUZ | CC | Reservado — canal privado | 3145555 | Karendaniela09 | Frontend web y documentación | ☑ [comentario](https://github.com/code-sena/ADSO-3145555/pull/17#issuecomment-6723435827) |
 | NATALIA CHALA CHALA | CC | Reservado — canal privado | 3145555 | nataliachala1 | Aplicación móvil, backend y despliegue | ☑ [comentario](https://github.com/code-sena/ADSO-3145555/pull/17#issuecomment-6723628268) |
-| KEVIN STIVEN LOPEZ AMAYA | CC | Reservado — canal privado | 3145555 | Kevin-Stiven-Lopez-Amaya404 | Backend, base de datos, integración IoT y documentación técnica | ☐ |
+| KEVIN STIVEN LOPEZ AMAYA | CC | Reservado — canal privado | 3145555 | Kevin-Stiven-Lopez-Amaya404 | Backend, base de datos, integración IoT y documentación técnica | ☑ [comentario](https://github.com/code-sena/ADSO-3145555/pull/17) |
 
 Privacy and data verification: the unchecked boxes do not constitute consent. Full identification numbers are not to be included in the public README; the official registration form, if applicable, is completed through an authorized private channel. Refer to the privacy protocol linked below.
 

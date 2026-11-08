@@ -16,10 +16,10 @@ SENA ADSO, ficha 3145555. Actualizado el 2026-11-08.
 | 6 | Dos repositorios de documentación | `smart-home-doc` es el oficial; `smart-home-docs` es histórico. Igual con `smarthome-database` (oficial) y `smart-home-database` (histórico) | [`code-tag/`](code-tag/README.md) | Hecho |
 | 7 | Videos: cuál es el pitch y cuál el tutorial | Pitch 01:30 y tutorial 04:45, con enlace | [`10-videos/`](10-videos/README.md) | Dueño en Drive abre el acceso de lectura |
 | 8 | Tag `final-delivery-2026` y dos ZIP en cinco repositorios | Se etiquetan los cinco pedidos y, además, los dos oficiales (siete en total) | [`code-tag/`](code-tag/README.md) | Kevin y Natalia, tras las fusiones |
-| 9 | Autorización de datos en el README (0 de 3) | Las casillas siguen sin marcar: solo cada titular puede autorizar | [README](README.md#team-members--integrantes) | Cada integrante |
+| 9 | Autorización de datos en el README (0 de 3) | Los tres integrantes autorizaron en comentarios del PR #17; cada casilla enlaza a su comentario | [README](README.md#team-members--integrantes) | Hecho |
 | 10 | Rol en `team-roster.md` (0 de 3) | Rol de cada aprendiz, con la tabla de commits como evidencia | [`team-roster.md`](team-roster.md) | Hecho; cada integrante revisa el suyo |
 | 11 | Aporte en `software-registration.md` (0 de 3) | Aporte de cada aprendiz en la sección 2 | [`software-registration.md`](software-registration.md) | Hecho |
-| 12 | Ocho campos de las secciones 5 y 6 | Sección 5 completa. Sección 6 con el dato técnico de cada opción; la casilla legal la marcan los autores. Sección 8 con 28 componentes de terceros y su licencia | [`software-registration.md`](software-registration.md) | Hecho; casillas legales: autores |
+| 12 | Ocho campos de las secciones 5 y 6 | Sección 5 completa. Sección 6 con el dato técnico de cada opción; la casilla legal la marcan los autores. Sección 8 con 28 componentes de terceros y su licencia | [`software-registration.md`](software-registration.md) | Hecho; secciones 6 y 10 confirmadas por el equipo en el PR #17 |
 | 13 | Fecha de entrega y quién entrega | 2026-11-08, Kevin Stiven López Amaya | [README](README.md#general-information--información-general) | Hecho |
 | 14 | Acceso de escritura para `ariel5253` | Instrucciones por repositorio | [`code-tag/`](code-tag/README.md#acceso-del-instructor) | Natalia (4 repositorios) y Kevin (3) |
 

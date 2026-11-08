@@ -39,7 +39,7 @@ Cada integrante revisó esta declaración y confirma que es completa:
 
 - [x] Karen Daniela Holguín Cruz ([comentario](https://github.com/code-sena/ADSO-3145555/pull/17#issuecomment-6723435827))
 - [x] Natalia Chala Chala ([comentario](https://github.com/code-sena/ADSO-3145555/pull/17#issuecomment-6723628268))
-- [ ] Kevin Stiven López Amaya
+- [x] Kevin Stiven López Amaya ([comentario](https://github.com/code-sena/ADSO-3145555/pull/17))
 
 ## Referencias
 
