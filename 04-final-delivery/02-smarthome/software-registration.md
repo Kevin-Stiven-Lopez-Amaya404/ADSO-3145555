@@ -24,7 +24,7 @@ Llene todos los campos vacíos. Sigue el Decreto 1360 de 1989.
 
 ## 2. Authors / Autores (art. 5, num. 2)
 
-Authors are the instructors and the apprentices listed in `team-roster.md`. Each apprentice checks their data and writes their contribution. / Los autores son los instructores y aprendices de `team-roster.md`. Cada aprendiz revisa sus datos y escribe su aporte.
+The following is the instructor's provisional author/contributor list and must be verified individually before legal filing; it does not confirm authorship or ownership. / La siguiente lista de autores y aportantes procede de la plantilla y debe verificarse individualmente antes de radicar el registro; no confirma por sí sola autoría ni titularidad.
 
 | Full name / Nombre completo | Doc. type / Tipo | Doc. number / Número | Ficha | Contribution / Aporte |
 |---|---|---|---|---|
@@ -38,9 +38,9 @@ Authors are the instructors and the apprentices listed in `team-roster.md`. Each
 | EDDIER YAIR LIBERATO CUENCA | | Kept privately / En custodia | | Instructor: see `team-roster.md` / ver `team-roster.md` |
 | JHON WILLIAN CORREDOR ARAUJO | | Kept privately / En custodia | | Instructor: see `team-roster.md` / ver `team-roster.md` |
 | ANDRES MORENO COLLAZOS | | Kept privately / En custodia | | Instructor: see `team-roster.md` / ver `team-roster.md` |
-| KAREN DANIELA HOLGUIN CRUZ | CC | 1079176743 | 3145555 | Modelo de datos PostgreSQL, migraciones Liquibase y documentación (por ratificar). |
-| NATALIA CHALA CHALA | CC | 1075508373 | 3145555 | Infraestructura Docker, despliegue local y configuración del entorno (por ratificar). |
-| KEVIN STIVEN LOPEZ AMAYA | CC | 1077724241 | 3145555 | Backend NestJS/MQTT y documentación técnica de la entrega (por ratificar). |
+| KAREN DANIELA HOLGUIN CRUZ | CC | Reservado — canal privado | 3145555 | Modelo de datos PostgreSQL, migraciones Liquibase y documentación (por ratificar). |
+| NATALIA CHALA CHALA | CC | Reservado — canal privado | 3145555 | Infraestructura Docker, despliegue local y configuración del entorno (por ratificar). |
+| KEVIN STIVEN LOPEZ AMAYA | CC | Reservado — canal privado | 3145555 | Backend NestJS/MQTT y documentación técnica de la entrega (por ratificar). |
 
 ## 3. Producer / Productor (art. 5, num. 3)
 
@@ -122,3 +122,8 @@ Relacione código, librerías, modelos, imágenes o datos que el equipo no creó
 ## Control de verificación para registro (7 de noviembre de 2026)
 
 Los campos técnicos se han completado desde la arquitectura, el proyecto y el informe de despliegue. **No se ha firmado ni aceptado por los integrantes ninguna declaración jurídica nueva.** Son pendientes de ratificación: identificación del solicitante, roles y aportes de los tres aprendices, primer año del código, tipo legal de obra, origen/originalidad, estado de publicación y componentes de terceros con sus licencias. No se han alterado las casillas finales de consentimiento ni las declaraciones bajo la sección 10.
+
+
+## Privacidad y verificación antes del registro
+
+Los números completos de documento de los integrantes se **reservan** en esta copia pública; los exige el formulario oficial DNDA cuando corresponda, pero se diligencian **por canal privado autorizado** con el titular. Los campos de autores, productores y titulares patrimoniales de la plantilla son **propuestas sujetas a revisión del instructor y de las personas involucradas**, no constancias legales aprobadas. No cargar firmas ni documentos de identidad a la carpeta pública. Consulte [protocolo de privacidad y autorizaciones](PROTOCOLO-PRIVACIDAD-Y-AUTORIZACIONES-2026-11-07.md). La redacción visible no elimina automáticamente datos de versiones previas ni de otros archivos públicos.
