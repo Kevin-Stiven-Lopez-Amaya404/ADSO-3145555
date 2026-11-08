@@ -44,7 +44,7 @@ Este inventario consolida en el **PR #17** los archivos originalmente aportados 
 | Responsable | Acción verificable | Estado |
 |---|---|---|
 | Natalia (propietaria de repositorios) | Revisar corrección web en upstream; aprobar CI web y las versiones de `main` | Pendiente |
-| Equipo móvil | Probar APK/flujo físico Android, revisar PR #61 y PR #49 antes de promover `main` | Pendiente |
+| Equipo móvil | PR #61 y #49 ya fusionados; validar APK real Android/Shelly y evaluar incidencias #42/#52/#53 antes de autorizar release | Pruebas físicas pendientes; producción bloqueada |
 | Daniela | Confirmar que sus 5 archivos de #13 aparecen en #17 y cerrar #13 **sin fusionar** | Pendiente; la cuenta conectada recibió 403 al intentar cerrar |
 | Instructor/mantenedor institucional | Revisar y fusionar PR #17 | Pendiente; 403 para la cuenta de Stiven |
 | Propietarios de Drive | Configurar enlaces `Cualquier persona con enlace → Lector` y probar acceso anónimo | Pendiente de comprobación |
@@ -63,3 +63,8 @@ El [diagnóstico y hotfix reproducible](WEB-CI-BLOQUEO-Y-HOTFIX-2026-11-07.md) c
 ## Complemento QA Android / Shelly (7-11-2026)
 
 Se añadieron al producto **05 Pruebas** un [protocolo PDF](05-test-documentation/qa-android-shelly-2026-11-07.pdf), [fuente Markdown](05-test-documentation/qa-android-shelly-2026-11-07.md) y [matriz CSV de 18 casos](05-test-documentation/qa-android-shelly-registro-2026-11-07.csv). La APK **debug** de [QA `6c3946e`, build #42404346123](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/actions/runs/42404346123) compiló y su artefacto GitHub #13587033044 estaba disponible hasta el 14-11-2026. `main` móvil `d830ed0` tiene CI aprobada, pero **no existe evidencia física Android/Shelly** de esa versión en esta auditoría. Las incidencias [#42](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/issues/42), [#52](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/issues/52) y [#53](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/issues/53) continúan abiertas; el [gate Production Release Readiness](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/actions/runs/42404346141) falló de manera esperada. **No marcar pruebas físicas como PASS ni considerar pairing Shelly productivo.**
+
+
+## Control de cierre y responsables vigente
+
+Para el checklist único de evaluación, las acciones de los titulares y la relación precisa entre lo subido, lo aprobado y lo todavía no verificable, consultar [CIERRE-DOCUMENTAL-Y-ACEPTACION-2026-11-07.md](CIERRE-DOCUMENTAL-Y-ACEPTACION-2026-11-07.md). **No publicar los videos privados ni declarar autorizados los números de documento de los autores** sin revisión y consentimiento.
