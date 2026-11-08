@@ -22,7 +22,7 @@ Fuente: elaboración propia.
 
 La documentación oficial es **`smart-home-doc`** (152 archivos). La base de datos oficial es **`smarthome-database`** (sin guion entre *smart* y *home*): contiene las 100 migraciones Liquibase y las políticas RLS.
 
-Los enlaces de los ZIP apuntan al Release [`final-delivery`](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/releases/tag/final-delivery) del fork de quien entrega. El commit exacto de cada tag queda en [`SHA256SUMS.txt`](SHA256SUMS.txt) junto a la huella de cada ZIP.
+Los enlaces de los ZIP apuntan al Release [`final-delivery`](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/releases/tag/final-delivery) del fork de quien entrega. Los siete tags se crearon el 2026-11-08 sobre el `main` de cada repositorio, después de fusionar las correcciones y con el CI de `main` aprobado. El commit exacto de cada tag queda en [`SHA256SUMS.txt`](SHA256SUMS.txt) junto a la huella de cada ZIP.
 
 ## Por qué dos ZIP
 

@@ -29,7 +29,7 @@ El commit de cada tag y la huella SHA-256 de cada ZIP están en `SHA256SUMS.txt`
 
 ### Documentación
 
-`SmartHome.zip` contiene la carpeta de entrega: secciones 01–10 en PDF con su DOCX editable, roles, registro de software y declaración de uso de IA.
+`SmartHome-entrega-final.zip` contiene la carpeta de entrega: secciones 01–10 en PDF con su DOCX editable, roles, registro de software y declaración de uso de IA. `SmartHome.zip` es la versión anterior de los documentos (2026-11-07) y se conserva como referencia.
 
 ### Probar el sistema
 
