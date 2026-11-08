@@ -10,7 +10,7 @@ Plataforma para gestionar hogares, controlar relés Shelly 1PM Gen4 y conocer el
 
 ### Código
 
-Dos ZIP por repositorio, generados sobre el tag anotado `final-delivery-2026`:
+Dos ZIP por repositorio, generados sobre el tag `final-delivery-2026`:
 
 - `<repo>-final-delivery-2026-main.zip`: solo el código de `main` en el tag. Es la versión para el registro de software.
 - `<repo>-full-export.zip`: clon espejo con todas las ramas, tags e historial.
