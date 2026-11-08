@@ -71,10 +71,10 @@ Autorización de datos: al marcar la casilla, el integrante confirma sus datos y
 | [`07-improvement-actions/`](07-improvement-actions/) | Improvement actions / Acciones de mejoramiento | [PDF](07-improvement-actions/07-improvement-actions.pdf), [Word](07-improvement-actions/07-improvement-actions.docx) y Markdown actualizados en PR; aprobación pendiente |
 | [`08-manuals/`](08-manuals/) | Manuals / Manuales | [Técnico](08-manuals/technical-manual.pdf), [Instalación](08-manuals/installation-manual.pdf), [Usuario](08-manuals/end-user-manual.pdf), con DOCX y MD; aprobación pendiente |
 | [`09-project-article/`](09-project-article/) | Project article / Artículo del proyecto | PDF de artículo subido en PR #17; pendiente aprobación |
-| [`10-videos/`](10-videos/) | Videos / Videos | ☐ |
-| [`code-tag/`](code-tag/) | Repository links, tags and ZIP files / Enlaces, tags y ZIP | ☐ |
-| [`team-roster.md`](team-roster.md) | Team and roles / Equipo y roles | ☐ |
-| [`software-registration.md`](software-registration.md) | Software registration data / Datos para registro de software | ☐ |
+| [`10-videos/`](10-videos/) | Videos / Videos | Propuestas privadas pitch 01:30 y tutorial 04:45; revisión de privacidad/audio, aprobación y acceso Lector pendientes |
+| [`code-tag/`](code-tag/) | Repository links, tags and ZIP files / Enlaces, tags y ZIP | Auditoría preparada; 5 tags y 10 ZIP técnicos pendientes |
+| [`team-roster.md`](team-roster.md) | Team and roles / Equipo y roles | Roles propuestos, pendientes de ratificación individual |
+| [`software-registration.md`](software-registration.md) | Software registration data / Datos para registro de software | Campos técnicos propuestos; autoría, consentimientos y declaraciones legales pendientes |
 
 ## Large files on Google Drive / Archivos pesados en Google Drive
 
@@ -102,3 +102,8 @@ Carpeta de fuentes documentales: https://drive.google.com/drive/folders/1FI2E_qA
 - **[PR #5](https://github.com/code-sena/ADSO-3145555/pull/5):** cerrado sin fusionar porque sus 546 archivos pertenecían a carpetas ajenas al alcance final de SmartHome.
 - **[Auditoría de permisos Drive](AUDITORIA-ACCESO-DRIVE.md):** revisar en privado los accesos; configurar `Cualquier persona con el enlace → Lector` y probar anónimamente.
 - **[Respuesta a las 14 correcciones](RESPUESTA-14-CORRECCIONES-INSTRUCTOR.md):** separa lo preparado de lo que requiere aceptación o acción del propietario.
+
+
+## Handoff de cierre al instructor — estado actualizado
+
+Ver [control de cierre y aceptación](CIERRE-DOCUMENTAL-Y-ACEPTACION-2026-11-07.md). El PR #17 contiene los PDF de las secciones 01–09 (incluidos 3 manuales de 08) y evidencia QA documental; **no se ha fusionado**, y el PR #13 continúa abierto para cierre sin merge por su autora. El móvil tiene Expo SDK 58 integrado en `main` y CI automatizada aprobada, pero pruebas físicas Android/Shelly y autorización de producción pendientes. El Release conserva un único ZIP documental; cinco tags y diez ZIP de código siguen pendientes. **Antes de publicar o fusionar**, el instructor y cada integrante deben revisar las autorizaciones no marcadas y la presencia de números de identificación precargados en documentación pública; no se considera otorgado consentimiento por defecto.
