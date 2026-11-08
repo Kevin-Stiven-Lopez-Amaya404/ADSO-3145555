@@ -1,15 +1,13 @@
 
 # Producto 02 — Análisis del software
 
-
-**Servicio Nacional de Aprendizaje (SENA)**  
-**Programa:** Análisis y Desarrollo de Software  
-**Ficha:** 3145555  
-**Proyecto:** SmartHome  
-**Elaborado por:** Natalia Chala Chala, Kevin Stiven López Amaya y Karen Daniela Holguín Cruz  
-**Instructor:** José de Jesús Motta Vargas  
-**Fecha de actualización:** 6 de noviembre de 2026
-
+Servicio Nacional de Aprendizaje (SENA)  
+Programa: Análisis y Desarrollo de Software  
+Ficha: 3145555  
+Proyecto: SmartHome  
+Elaborado por: Natalia Chala Chala, Kevin Stiven López Amaya y Karen Daniela Holguín Cruz  
+Instructor: José de Jesús Motta Vargas  
+Fecha de actualización: 6 de noviembre de 2026
 
 ## 1. Presentación
 
@@ -17,7 +15,13 @@ Este documento actualiza el análisis del software de SmartHome con un criterio 
 
 El análisis se concentra en cuatro ejes funcionales que sí son relevantes para la entrega: autenticación, gestión de hogares y espacios, control/monitoreo de dispositivos y consulta del consumo energético. También se dejan explícitos los límites: una respuesta HTTP exitosa o la publicación de un mensaje MQTT no equivalen, por sí solas, a la confirmación física del dispositivo.
 
+Como marco de referencia, el análisis sigue los principios de ingeniería de requisitos de ISO/IEC/IEEE 29148, que exigen que cada requisito sea verificable y trazable (ISO/IEC/IEEE, 2018), y la descripción del comportamiento mediante casos de uso y vistas dinámicas propia del análisis orientado a objetos (Sommerville, 2016). El tratamiento de los datos personales de usuarios y hogares se revisa conforme a la Ley 1581 de 2012 (Congreso de la República de Colombia, 2012).
+
 ## 2. Fuentes utilizadas y criterio de lectura
+
+**Tabla 1**
+
+*Fuentes utilizadas y criterio de lectura*
 
 | Tipo de fuente | Descripción | Uso en este documento |
 |---|---|---|
@@ -26,7 +30,13 @@ El análisis se concentra en cuatro ejes funcionales que sí son relevantes para
 | Drive del equipo | Diagramas, prototipos, navegación y documentos históricos. | Fuente de apoyo para comprender la intención del diseño. |
 | CI / GitHub Actions | Workflows y resultados automáticos. | Fuente de contraste para afirmar qué fue probado y qué no. |
 
+Fuente: elaboración propia.
+
 ### 2.1 Repositorios y referencias de trabajo
+
+**Tabla 2**
+
+*Repositorios y referencias de trabajo*
 
 | Componente | Repositorio | Referencia base usada en el análisis |
 |---|---|---|
@@ -35,20 +45,26 @@ El análisis se concentra en cuatro ejes funcionales que sí son relevantes para
 | Frontend móvil | `Kevin-Stiven-Lopez-Amaya404/from_movil` | rama `dev` y evidencia documental previa |
 | Base de datos | `nataliachala1/smarthome-database` | rama `dev/main` y changelog Liquibase |
 
+Fuente: elaboración propia.
+
 ## 3. Alcance funcional analizado
 
 De acuerdo con el SRS revisado, SmartHome contempla gestión de usuarios, hogares, dispositivos, monitoreo de consumo, reportes, notificaciones y opciones de personalización. Para este documento se priorizan los flujos que permiten explicar la lógica principal del sistema y conectarla con vistas dinámicas útiles para la entrega.
 
 ### 3.1 Actores identificados
 
-- **Usuario autenticado:** consulta información de hogares, dispositivos, consumo, notificaciones y reportes.
-- **Administrador o usuario con mayores permisos:** puede ejecutar tareas de administración según su rol global o rol por hogar.
-- **Invitado o miembro restringido:** consume información y tiene permisos limitados sobre acciones sensibles.
-- **Backend SmartHome:** orquesta validaciones, reglas de negocio, acceso a datos y emisión de eventos.
-- **Dispositivo IoT / canal MQTT:** recibe órdenes o entrega telemetría cuando el entorno está configurado.
-- **Base de datos PostgreSQL:** persiste usuarios, hogares, membresías, dispositivos, telemetría y auditoría.
+- Usuario autenticado: consulta información de hogares, dispositivos, consumo, notificaciones y reportes.
+- Administrador o usuario con mayores permisos: puede ejecutar tareas de administración según su rol global o rol por hogar.
+- Invitado o miembro restringido: consume información y tiene permisos limitados sobre acciones sensibles.
+- Backend SmartHome: orquesta validaciones, reglas de negocio, acceso a datos y emisión de eventos.
+- Dispositivo IoT / canal MQTT: recibe órdenes o entrega telemetría cuando el entorno está configurado.
+- Base de datos PostgreSQL: persiste usuarios, hogares, membresías, dispositivos, telemetría y auditoría.
 
 ## 4. Matriz de trazabilidad entre requisitos y flujos analizados
+
+**Tabla 3**
+
+*Matriz de trazabilidad entre requisitos y flujos analizados*
 
 | Flujo / caso de uso analizado | Requisitos del SRS relacionados | Qué se analiza |
 |---|---|---|
@@ -61,9 +77,15 @@ De acuerdo con el SRS revisado, SmartHome contempla gestión de usuarios, hogare
 | Sincronización entre plataformas | RF5.1, RF5.3 | Consistencia entre clientes y recuperación de información. |
 | Personalización | RF6.1, RF6.2 | Idioma, tema y preferencias de interfaz. |
 
+Fuente: elaboración propia.
+
 ## 5. Relación entre los diagramas y los requisitos
 
 La mejora principal de esta versión consiste en dejar de tratar los diagramas como piezas aisladas. Cada vista dinámica ahora se entiende como un soporte visual de uno o varios requisitos.
+
+**Tabla 4**
+
+*Relación entre los diagramas y los requisitos*
 
 | Vista dinámica | Propósito | Requisitos asociados |
 |---|---|---|
@@ -73,14 +95,16 @@ La mejora principal de esta versión consiste en dejar de tratar los diagramas c
 | Secuencia de consulta de consumo | Representar lectura de datos y respuesta al usuario. | RF4.1, RF4.2, RF4.3 |
 | Actividad de notificaciones / alertas | Mostrar generación, recuperación y lectura de avisos. | RF4.4 |
 
+Fuente: elaboración propia.
+
 ## 6. Análisis de flujos principales
 
 ### 6.1 Flujo 1 — autenticación del usuario
 
 El recorrido inicia cuando el usuario envía sus credenciales desde el cliente web o móvil. El backend valida formato, identidad y estado de la cuenta; si la verificación es exitosa, se genera una sesión o token y el cliente habilita el acceso a módulos protegidos. En este flujo también se relacionan procesos de cierre de sesión y recuperación de contraseña, porque forman parte del ciclo de autenticación.
 
-**Lo que sí se puede afirmar:** existe una estructura funcional donde la autenticación es un módulo reconocible y está conectada con el consumo de APIs desde web y móvil.  
-**Lo que no debe afirmarse sin nueva evidencia:** que MFA esté operativo y obligatorio en v1.0, porque el SRS revisado lo deja fuera de alcance y los documentos históricos no son prueba suficiente.
+Lo que sí se puede afirmar: existe una estructura funcional donde la autenticación es un módulo reconocible y está conectada con el consumo de APIs desde web y móvil.  
+Lo que no debe afirmarse sin nueva evidencia: que MFA esté operativo y obligatorio en v1.0, porque el SRS revisado lo deja fuera de alcance y los documentos históricos no son prueba suficiente.
 
 ### 6.2 Flujo 2 — gestión y control de dispositivos
 
@@ -88,8 +112,8 @@ Una vez autenticado, el usuario accede al listado de dispositivos de su hogar. D
 
 Cuando el caso de uso implica control remoto, la aplicación puede terminar en una publicación de evento, comando o mensaje hacia el componente que se comunica con el canal IoT. Por eso el análisis separa dos resultados distintos:
 
-1. **Orden aceptada por el sistema**: el backend admite la solicitud y genera la acción interna.
-2. **Accionamiento físico comprobado**: requiere evidencia adicional de laboratorio o pruebas integradas.
+1. Orden aceptada por el sistema: el backend admite la solicitud y genera la acción interna.
+2. Accionamiento físico comprobado: requiere evidencia adicional de laboratorio o pruebas integradas.
 
 ### 6.3 Flujo 3 — consulta de consumo energético
 
@@ -105,7 +129,7 @@ Las notificaciones sirven como punto de unión entre consumo, alertas y experien
 
 1. El sistema presenta una organización suficiente para describir los flujos principales sin depender únicamente de pantallas.
 2. El SRS actualizado corrige o limita algunas afirmaciones históricas; por ejemplo, MFA y operación offline total no deben tratarse como características verificadas de la versión 1.0.
-3. El análisis de control de dispositivos debe conservar la distinción entre **orden emitida** y **acción física comprobada**.
+3. El análisis de control de dispositivos debe conservar la distinción entre orden emitida y acción física comprobada.
 4. Los diagramas del equipo son útiles, pero deben citarse como apoyo documental y no como prueba de ejecución.
 5. La trazabilidad mejora cuando cada caso de uso se conecta explícitamente con uno o varios requisitos RF/RNF.
 
@@ -119,3 +143,11 @@ Las notificaciones sirven como punto de unión entre consumo, alertas y experien
 ## 9. Conclusión
 
 SmartHome puede describirse de forma consistente como un sistema con clientes web y móvil, backend central, persistencia en PostgreSQL y componentes de integración IoT. La mejora introducida en esta versión del documento consiste en amarrar ese análisis a los requisitos oficiales del SRS, evitando afirmaciones no verificadas. En consecuencia, el producto 02 queda mejor sustentado para una revisión académica y técnica.
+
+## Referencias
+
+Congreso de la República de Colombia. (2012, 17 de octubre). *Ley Estatutaria 1581 de 2012, por la cual se dictan disposiciones generales para la protección de datos personales*. Diario Oficial n.º 48.587. https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981
+
+ISO/IEC/IEEE. (2018). *Systems and software engineering — Life cycle processes — Requirements engineering* (ISO/IEC/IEEE 29148:2018). https://www.iso.org/standard/72089.html
+
+Sommerville, I. (2016). *Software engineering* (10.ª ed.). Pearson.

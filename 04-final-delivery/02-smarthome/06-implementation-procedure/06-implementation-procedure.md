@@ -1,19 +1,19 @@
 
 # Producto 06 — Procedimiento de implementación
 
-
-**Servicio Nacional de Aprendizaje (SENA)**  
-**Programa:** Análisis y Desarrollo de Software  
-**Ficha:** 3145555  
-**Proyecto:** SmartHome  
-**Elaborado por:** Natalia Chala Chala, Kevin Stiven López Amaya y Karen Daniela Holguín Cruz  
-**Instructor:** José de Jesús Motta Vargas  
-**Fecha de actualización:** 6 de noviembre de 2026
-
+Servicio Nacional de Aprendizaje (SENA)  
+Programa: Análisis y Desarrollo de Software  
+Ficha: 3145555  
+Proyecto: SmartHome  
+Elaborado por: Natalia Chala Chala, Kevin Stiven López Amaya y Karen Daniela Holguín Cruz  
+Instructor: José de Jesús Motta Vargas  
+Fecha de actualización: 6 de noviembre de 2026
 
 ## 1. Presentación
 
 Este documento organiza el procedimiento de implementación de SmartHome para entorno local y de validación académica. Se construye a partir de los repositorios reales del proyecto y toma como referencia la documentación histórica del equipo, pero corrige el problema más importante detectado en versiones anteriores: el uso de comandos, rutas y configuraciones genéricas sin verificar.
+
+Como marco de referencia, la instalación usa contenedores definidos con Docker Compose (Docker Inc., s. f.), migraciones de base de datos versionadas con Liquibase (Liquibase, s. f.) y un backend construido con NestJS (NestJS, s. f.).
 
 ## 2. Objetivo y alcance
 
@@ -24,9 +24,13 @@ El propósito es dejar una ruta ordenada para levantar los componentes principal
 - Frontend web
 - Frontend móvil
 
-Cuando se menciona hardware o integración IoT, se hace como procedimiento complementario y condicionado a que existan los recursos de laboratorio disponibles. Este documento **no** incluye secretos, contraseñas reales, IP privadas ni valores productivos.
+Cuando se menciona hardware o integración IoT, se hace como procedimiento complementario y condicionado a que existan los recursos de laboratorio disponibles. Este documento no incluye secretos, contraseñas reales, IP privadas ni valores productivos.
 
 ## 3. Repositorios que intervienen en la implementación
+
+**Tabla 1**
+
+*Repositorios que intervienen en la implementación*
 
 | Componente | Repositorio |
 |---|---|
@@ -35,6 +39,8 @@ Cuando se menciona hardware o integración IoT, se hace como procedimiento compl
 | Frontend web | `https://github.com/nataliachala1/smarthome-frontend-web` |
 | Frontend móvil | `https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil` |
 | Documentación (referencia) | `https://github.com/Kevin-Stiven-Lopez-Amaya404/smart-home-docs` |
+
+Fuente: elaboración propia.
 
 ## 4. Requisitos previos del entorno
 
@@ -78,7 +84,7 @@ git clone https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil.git
 
 ### 6.2 Preparar la base de datos
 
-**Fuente de verdad:** el repositorio `smarthome-database`.
+Fuente de verdad: el repositorio `smarthome-database`.
 
 Procedimiento recomendado:
 
@@ -88,7 +94,7 @@ Procedimiento recomendado:
 4. Ejecutar `validate` antes de aplicar cambios.
 5. Ejecutar las migraciones según el procedimiento definido por ese repositorio.
 
-**Nota importante:** no se debe asumir que `npx liquibase update` desde el backend sea siempre la ruta oficial. Si el repositorio de base de datos define otro flujo, ese flujo prevalece.
+Nota importante: no se debe asumir que `npx liquibase update` desde el backend sea siempre la ruta oficial. Si el repositorio de base de datos define otro flujo, ese flujo prevalece.
 
 ### 6.3 Configurar el backend
 
@@ -108,7 +114,7 @@ npm install
 npm run start:dev
 ```
 
-**Variables típicas a validar** (solo como categorías, no como valores definitivos):
+Variables típicas a validar (solo como categorías, no como valores definitivos):
 
 - `DATABASE_URL`
 - `PORT`
@@ -154,6 +160,10 @@ Si el entorno usa variables públicas de Expo, debe respetarse la convención ex
 
 ## 7. Verificaciones mínimas posteriores al levantamiento
 
+**Tabla 2**
+
+*Verificaciones mínimas posteriores al levantamiento*
+
 | Verificación | Resultado esperado |
 |---|---|
 | Base de datos disponible | El backend puede conectarse sin errores de conexión. |
@@ -162,17 +172,23 @@ Si el entorno usa variables públicas de Expo, debe respetarse la convención ex
 | Frontend móvil activo | La app inicia y puede apuntar al backend del entorno de prueba. |
 | Migraciones consistentes | El esquema creado coincide con el repositorio de base de datos. |
 
+Fuente: elaboración propia.
+
 ## 8. Integración IoT y hardware (condicionada)
 
 La documentación histórica menciona dispositivos compatibles, MQTT y trabajo con Shelly 1PM Gen4. Ese procedimiento solo debe incluirse como definitivo si el equipo dispone de un entorno real de validación.
 
 ### Recomendaciones editoriales para este punto
 
-- Si no hubo práctica real con hardware, redactar esta sección como **procedimiento propuesto**.
+- Si no hubo práctica real con hardware, redactar esta sección como procedimiento propuesto.
 - Si sí hubo práctica real, anexar evidencia: fotos, bitácora, logs o capturas.
 - No fijar IP privadas ni credenciales del laboratorio en el documento final.
 
 ## 9. Problemas frecuentes y acciones sugeridas
+
+**Tabla 3**
+
+*Problemas frecuentes y acciones sugeridas*
 
 | Problema | Posible causa | Acción sugerida |
 |---|---|---|
@@ -181,6 +197,8 @@ La documentación histórica menciona dispositivos compatibles, MQTT y trabajo c
 | La app móvil no alcanza el backend | IP local o red incorrecta | Verificar que el celular y el servidor estén en la misma red |
 | Migraciones fallan | Configuración Liquibase incompleta | Revisar propiedades y ejecutar `validate` antes de `update` |
 | Integración IoT no responde | entorno MQTT o hardware no preparado | Separar diagnóstico de software y laboratorio |
+
+Fuente: elaboración propia.
 
 ## 10. Checklist final de implementación
 
@@ -195,3 +213,11 @@ La documentación histórica menciona dispositivos compatibles, MQTT y trabajo c
 ## 11. Conclusión
 
 La presente versión del procedimiento de implementación mejora la confiabilidad del producto 06 porque se apoya en los repositorios reales del proyecto y en la separación correcta de responsabilidades entre base de datos, backend y clientes. Además, evita copiar comandos desactualizados o secretos de ejemplo y deja claramente diferenciados los pasos verificados, los dependientes del entorno y los condicionados al laboratorio de hardware.
+
+## Referencias
+
+Docker Inc. (s. f.). *Docker Compose documentation*. Recuperado el 8 de noviembre de 2026, de https://docs.docker.com/compose/
+
+Liquibase. (s. f.). *Liquibase documentation*. Recuperado el 8 de noviembre de 2026, de https://docs.liquibase.com/
+
+NestJS. (s. f.). *NestJS documentation*. Recuperado el 8 de noviembre de 2026, de https://docs.nestjs.com/

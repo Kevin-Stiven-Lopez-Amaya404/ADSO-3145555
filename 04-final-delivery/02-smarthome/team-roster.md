@@ -27,15 +27,30 @@ Los aprendices completan su rol, por ejemplo backend, frontend, base de datos, Q
 
 | Full name / Nombre completo | Doc. type / Tipo | Doc. number / Número | Ficha | GitHub user / Usuario | Role in the project / Rol en el proyecto | Author / Autor |
 |---|---|---|---|---|---|---|
-| KAREN DANIELA HOLGUIN CRUZ | CC | Reservado — canal privado | 3145555 | Karendaniela09 | PostgreSQL, migraciones Liquibase y documentación (por ratificar) | Yes / Sí |
-| NATALIA CHALA CHALA | CC | Reservado — canal privado | 3145555 | nataliachala1 | Infraestructura, Docker y despliegue local (por ratificar) | Yes / Sí |
-| KEVIN STIVEN LOPEZ AMAYA | CC | Reservado — canal privado | 3145555 | Kevin-Stiven-Lopez-Amaya404 | Backend NestJS/MQTT y documentación técnica de entrega (por ratificar) | Yes / Sí |
+| KAREN DANIELA HOLGUIN CRUZ | CC | Reservado — canal privado | 3145555 | Karendaniela09 | Frontend web (React, Vite) y documentación; aportes al backend | Yes / Sí |
+| NATALIA CHALA CHALA | CC | Reservado — canal privado | 3145555 | nataliachala1 | Aplicación móvil (Expo/React Native), backend NestJS, base de datos y despliegue (dueña de los repositorios de backend, web y base de datos) | Yes / Sí |
+| KEVIN STIVEN LOPEZ AMAYA | CC | Reservado — canal privado | 3145555 | Kevin-Stiven-Lopez-Amaya404 | Backend NestJS/MQTT, migraciones PostgreSQL/Liquibase, integración Shelly en la app móvil y documentación técnica | Yes / Sí |
 
-## Nota de verificación
+## Evidencia de los roles
 
-Los roles proceden del documento de despliegue local/staging (octubre de 2026) y de los archivos aportados al PR #17. Se presentan para ratificación por cada integrante; no representan autorización de publicación ni reconocimiento legal definitivo de titularidad.
+Los roles salen del historial de Git (commits sin fusiones, todas las ramas, consultado el 2026-11-08):
 
+**Tabla 1**
+
+*Commits por integrante y repositorio*
+
+| Repositorio | Karen | Natalia | Kevin |
+|---|---:|---:|---:|
+| from_movil | 4 | 101 | 65 |
+| smarthome-backend | 17 | 61 | 38 |
+| smarthome-database | 0 | 23 | 32 |
+| smarthome-frontend-web | 17 | 9 | 20 |
+| smart-home-doc | 5 | 0 | 20 |
+
+Fuente: elaboración propia con `git log --no-merges --author` en cada repositorio.
+
+Los commits miden participación, no calidad ni tamaño del aporte. Cada integrante revisa su fila y avisa al instructor si su rol necesita otra descripción.
 
 ## Privacidad de la versión pública
 
-Los números completos de documento de los integrantes se sustituyeron por una indicación de custodia privada a la espera de consentimiento verificable. La versión pública no sustituye el formulario oficial DNDA. Los campos de autoría, aporte y titularidad precargados en la plantilla **deben ratificarse** con quienes corresponda; que una tabla contenga «Yes / Sí» no es una autorización personal documentada. Véase [protocolo de privacidad](PROTOCOLO-PRIVACIDAD-Y-AUTORIZACIONES-2026-11-07.md). El historial de Git puede conservar los valores anteriores.
+Los números de documento se entregan por canal privado. «Yes / Sí» en la columna de autoría refleja la plantilla del instructor; la autorización personal la da cada integrante en la casilla del [README](README.md). Ver el [protocolo de privacidad](PROTOCOLO-PRIVACIDAD-Y-AUTORIZACIONES-2026-11-07.md).

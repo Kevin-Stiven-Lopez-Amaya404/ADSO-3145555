@@ -38,9 +38,9 @@ The following is the instructor's provisional author/contributor list and must b
 | EDDIER YAIR LIBERATO CUENCA | | Kept privately / En custodia | | Instructor: see `team-roster.md` / ver `team-roster.md` |
 | JHON WILLIAN CORREDOR ARAUJO | | Kept privately / En custodia | | Instructor: see `team-roster.md` / ver `team-roster.md` |
 | ANDRES MORENO COLLAZOS | | Kept privately / En custodia | | Instructor: see `team-roster.md` / ver `team-roster.md` |
-| KAREN DANIELA HOLGUIN CRUZ | CC | Reservado — canal privado | 3145555 | Modelo de datos PostgreSQL, migraciones Liquibase y documentación (por ratificar). |
-| NATALIA CHALA CHALA | CC | Reservado — canal privado | 3145555 | Infraestructura Docker, despliegue local y configuración del entorno (por ratificar). |
-| KEVIN STIVEN LOPEZ AMAYA | CC | Reservado — canal privado | 3145555 | Backend NestJS/MQTT y documentación técnica de la entrega (por ratificar). |
+| KAREN DANIELA HOLGUIN CRUZ | CC | Reservado — canal privado | 3145555 | Frontend web (React 18, Vite 6, MUI), pruebas y documentación técnica; aportes al backend. |
+| NATALIA CHALA CHALA | CC | Reservado — canal privado | 3145555 | Aplicación móvil (Expo SDK 58, React Native), backend NestJS, base de datos y despliegue en Dokploy. |
+| KEVIN STIVEN LOPEZ AMAYA | CC | Reservado — canal privado | 3145555 | Backend NestJS/MQTT, migraciones PostgreSQL/Liquibase con RLS, integración Shelly en la app móvil y documentación de la entrega. |
 
 ## 3. Producer / Productor (art. 5, num. 3)
 
@@ -63,23 +63,23 @@ The following is the instructor's provisional author/contributor list and must b
 | Field / Campo | Value / Valor |
 |---|---|
 | Title / Título de la obra | SmartHome |
-| Year of creation / Año de creación | 2025 (primeros documentos identificados; confirmar fecha del primer código en Git) |
+| Year of creation / Año de creación | 2026 (primer commit de código: 2026-06-26 en `from_movil`; backend, web y base de datos desde 2026-09-04) |
 | Country of origin / País de origen | Colombia |
-| Version registered / Versión a registrar | final-delivery-2026 — etiqueta prevista, pendiente de creación/validación en repositorios originales |
-| Short description of its functions / Breve descripción de sus funciones | Gestiona hogares y miembros, dispositivos eléctricos IoT, control de cargas, telemetría, consumo, alertas e históricos. |
-| What sets it apart from similar software / Qué la diferencia de obras similares | Integra panel web y aplicación Android, telemetría MQTT por dispositivo, roles por hogar y PostgreSQL RLS. |
-| Programming languages / Lenguajes | TypeScript, JavaScript y SQL; configuración de servicios mediante YAML/Dockerfile. |
-| Type: web, mobile, desktop, device / Tipo: web, móvil, escritorio, dispositivo | Web y móvil Android, con API/backend y dispositivos IoT compatibles. |
+| Version registered / Versión a registrar | `final-delivery-2026` (tag anotado en cada repositorio; ver `code-tag/README.md`) |
+| Short description of its functions / Breve descripción de sus funciones | Gestiona hogares y sus miembros con roles (OWNER, MEMBER, GUEST), vincula relés Shelly 1PM Gen4, enciende y apaga cargas, recibe telemetría por MQTT, calcula consumo y costo estimado con tarifas y metas, y emite notificaciones y alertas en tiempo real. |
+| What sets it apart from similar software / Qué la diferencia de obras similares | Una sola plataforma con panel web y app Android; credenciales MQTT individuales por dispositivo; permisos por hogar aplicados en la propia base de datos con Row Level Security; costo de energía en pesos colombianos con tarifas históricas. |
+| Programming languages / Lenguajes | TypeScript, JavaScript y SQL (PL/pgSQL); configuración en YAML y Dockerfile. |
+| Type: web, mobile, desktop, device / Tipo: web, móvil, escritorio, dispositivo | Web y móvil (Android), con API REST/WebSocket e integración con dispositivos IoT. |
 
 ## 6. Declarations / Declaraciones (art. 4 y art. 5, num. 5 y 6)
 
 | Declaration / Declaración | Option / Opción |
 |---|---|
-| Origin / Origen | ☐ Original ☐ Derived work / Obra derivada — declaración y licencias pendientes de ratificar por los autores. |
-| If derived, base work / Si es derivada, obra de base | Pendiente de evaluación legal de obras y componentes reutilizados. |
-| Type of work / Clase de obra | ☐ Individual ☐ In collaboration / En colaboración ☐ Collective / Colectiva ☐ Anonymous / Anónima ☐ Pseudonymous / Seudónima ☐ Posthumous / Póstuma — elección por ratificar con titulares. |
-| Publication / Publicación | ☐ Unpublished / Inédita ☐ Published / Publicada — definir con el Centro; repositorios públicos no equivalen a declaración aprobada. |
-| If published, date and place / Si está publicada, fecha y lugar | Repositorios públicos GitHub; fecha de primera publicación y lugar legal pendientes de confirmar. |
+| Origin / Origen | ☐ Original ☐ Derived work / Obra derivada. Dato técnico: el código es del equipo y usa librerías de terceros sin modificarlas (sección 8); la interfaz web partió de un prototipo de Figma Make con componentes shadcn/ui. La casilla la marcan los autores. |
+| If derived, base work / Si es derivada, obra de base | Si se declara derivada: prototipo de interfaz generado con Figma Make (2026-09) y componentes shadcn/ui (MIT). |
+| Type of work / Clase de obra | ☐ Individual ☐ In collaboration / En colaboración ☐ Collective / Colectiva ☐ Anonymous / Anónima ☐ Pseudonymous / Seudónima ☐ Posthumous / Póstuma. Dato técnico: tres aprendices con commits en los mismos repositorios. La casilla la marcan los autores. |
+| Publication / Publicación | ☐ Unpublished / Inédita ☐ Published / Publicada. Dato técnico: el código está en repositorios públicos de GitHub. La declaración la define el Centro. |
+| If published, date and place / Si está publicada, fecha y lugar | GitHub (github.com/nataliachala1 y github.com/Kevin-Stiven-Lopez-Amaya404); primer commit público: 2026-06-26. |
 
 Software is treated as unpublished unless the rights holder states otherwise (art. 4). A public repository may count as publication: the team records it here, and the Centro decides the final declaration.
 
@@ -91,9 +91,9 @@ At least one is required. Attach all three. / Se exige al menos uno. Adjunte los
 
 | Element / Elemento | Where it is / Dónde está | Ready / Listo |
 |---|---|---|
-| Computer program / Programa de computador | ZIP files `final-delivery-2026` listed in `code-tag/README.md` / ZIP relacionados en `code-tag/README.md` | ☐ |
-| Program description / Descripción de programa | `02-software-analysis/` and `04-software-design/` | ☐ |
-| Auxiliary material / Material auxiliar | `08-manuals/` | ☐ |
+| Computer program / Programa de computador | ZIP files `final-delivery-2026` listed in `code-tag/README.md` / ZIP relacionados en `code-tag/README.md` | ☑ |
+| Program description / Descripción de programa | `02-software-analysis/` and `04-software-design/` | ☑ |
+| Auxiliary material / Material auxiliar | `08-manuals/` | ☑ |
 
 ## 8. Third-party components / Componentes de terceros
 
@@ -103,7 +103,36 @@ Relacione código, librerías, modelos, imágenes o datos que el equipo no creó
 
 | Component / Componente | Author or source / Autor o fuente | License / Licencia | Where it is used / Dónde se usa |
 |---|---|---|---|
-| | | | |
+| NestJS 11 (@nestjs/*) | Kamil Myśliwiec y colaboradores | MIT | Backend |
+| Prisma 7 (@prisma/client, adapter-pg) | Prisma Data, Inc. | Apache-2.0 | Backend: acceso a datos |
+| node-postgres (pg) | Brian Carlson y colaboradores | MIT | Backend |
+| argon2 (node-argon2) | Ranieri Althoff | MIT | Backend: hash de contraseñas |
+| MQTT.js (mqtt) | Colaboradores de MQTT.js | MIT | Backend: cliente MQTT |
+| Socket.IO y socket.io-client | Guillermo Rauch y colaboradores | MIT | Backend, web y móvil: tiempo real |
+| Nodemailer | Andris Reinman | MIT-0 | Backend: correo |
+| helmet, cookie-parser, class-validator, class-transformer, RxJS, Swagger UI | Sus respectivos autores | MIT / Apache-2.0 (RxJS) | Backend |
+| bonjour-service | Colaboradores de bonjour-service | MIT | Backend: descubrimiento mDNS |
+| React 18 y React 19 | Meta Platforms, Inc. | MIT | Web (18) y móvil (19) |
+| Vite 6 | Evan You y colaboradores | MIT | Web: compilación |
+| MUI Material 7 y Emotion | MUI / Emotion | MIT | Web: componentes |
+| Tailwind CSS 4 | Tailwind Labs, Inc. | MIT | Web: estilos |
+| shadcn/ui | shadcn | MIT | Web: componentes base (vía Figma Make) |
+| Recharts, React Router, i18next, react-hot-toast | Sus respectivos autores | MIT | Web |
+| Fotografías de Unsplash | Fotógrafos de Unsplash | Licencia Unsplash | Web: imágenes del prototipo |
+| Figma Make | Figma, Inc. | Términos de servicio de Figma | Web: prototipo inicial de la interfaz |
+| Expo SDK 58 y módulos expo-* | 650 Industries, Inc. (Expo) | MIT | Móvil |
+| React Native 0.88 | Meta Platforms, Inc. | MIT | Móvil |
+| React Navigation, Reanimated, Gesture Handler, react-native-svg, react-native-zeroconf | Sus respectivos autores | MIT | Móvil |
+| @sfourdrinier/react-native-ble-plx | Polidea / Intent y bifurcación de S. Fourdrinier | Apache-2.0 | Móvil: Bluetooth LE con el Shelly |
+| PostgreSQL 18 | PostgreSQL Global Development Group | PostgreSQL License | Base de datos |
+| Liquibase 4.29 | Liquibase, Inc. | Apache-2.0 | Base de datos: migraciones |
+| Eclipse Mosquitto | Eclipse Foundation | EPL-2.0 / EDL-1.0 | Broker MQTT |
+| nginx (imagen nginx-unprivileged) | F5, Inc. | BSD-2-Clause | Web: servidor y proxy |
+| Mailpit | Ralph Slooten | MIT | Instalación local: correo de prueba |
+| Docker y Docker Compose | Docker, Inc. | Apache-2.0 | Contenedores |
+| Firmware y API RPC de Shelly 1PM Gen4 | Shelly Group (Allterco Robotics) | Propietario (el equipo solo usa su API pública) | Dispositivo IoT |
+
+La lista completa de dependencias, con su versión exacta, está en el `package-lock.json` de cada repositorio. Ninguna librería se copió ni se modificó dentro del código del equipo. El uso de IA está en [`declaracion-uso-ia.md`](declaracion-uso-ia.md).
 
 ## 9. Private data / Datos privados
 
@@ -119,11 +148,10 @@ Relacione código, librerías, modelos, imágenes o datos que el equipo no creó
 - [ ] No passwords, tokens or keys are included. / No se incluyen contraseñas, tokens ni llaves.
 
 
-## Control de verificación para registro (7 de noviembre de 2026)
+## Qué falta y quién lo hace
 
-Los campos técnicos se han completado desde la arquitectura, el proyecto y el informe de despliegue. **No se ha firmado ni aceptado por los integrantes ninguna declaración jurídica nueva.** Son pendientes de ratificación: identificación del solicitante, roles y aportes de los tres aprendices, primer año del código, tipo legal de obra, origen/originalidad, estado de publicación y componentes de terceros con sus licencias. No se han alterado las casillas finales de consentimiento ni las declaraciones bajo la sección 10.
+- Sección 1 (solicitante): la define el instructor líder con el Centro.
+- Secciones 6 y 10: cada autor marca sus casillas. Los datos técnicos ya están escritos al lado de cada opción.
+- Sección 9: cada integrante entrega sus datos privados por el canal que indique el instructor.
 
-
-## Privacidad y verificación antes del registro
-
-Los números completos de documento de los integrantes se **reservan** en esta copia pública; los exige el formulario oficial DNDA cuando corresponda, pero se diligencian **por canal privado autorizado** con el titular. Los campos de autores, productores y titulares patrimoniales de la plantilla son **propuestas sujetas a revisión del instructor y de las personas involucradas**, no constancias legales aprobadas. No cargar firmas ni documentos de identidad a la carpeta pública. Consulte [protocolo de privacidad y autorizaciones](PROTOCOLO-PRIVACIDAD-Y-AUTORIZACIONES-2026-11-07.md). La redacción visible no elimina automáticamente datos de versiones previas ni de otros archivos públicos.
+Los números de documento no se publican aquí. Ver el [protocolo de privacidad](PROTOCOLO-PRIVACIDAD-Y-AUTORIZACIONES-2026-11-07.md).

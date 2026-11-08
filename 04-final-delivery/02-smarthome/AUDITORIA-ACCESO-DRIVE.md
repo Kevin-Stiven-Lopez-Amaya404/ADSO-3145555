@@ -13,6 +13,6 @@ La documentación original está en [la carpeta del equipo](https://drive.google
 **La comprobación de seguridad de permisos específicos se comunicará en privado a los responsables de la carpeta para reducir riesgos de modificación por terceros.** Esta nota no representa una auditoría de seguridad completada.
 
 ## Referencias
-- [Inventario de la entrega](DOCUMENTACION-DEL-RELEASE.md)
-- [Videos](10-videos/video-links.md)
-- [Respuesta a las 14 observaciones](RESPUESTA-14-CORRECCIONES-INSTRUCTOR.md)
+- [Contenido de la entrega](README.md)
+- [Videos](10-videos/README.md)
+- [Respuesta a las observaciones](RESPUESTA-CORRECCIONES-INSTRUCTOR.md)

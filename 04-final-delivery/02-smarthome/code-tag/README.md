@@ -1,75 +1,54 @@
 # Code and tags / Código y tags: SmartHome
 
-## Original repositories / Repositorios originales
+## Repositorios oficiales
 
-Every original working repository of the project must be listed here and must be **public**. The instructor compares what was delivered against these repositories, so they must stay public and keep their full history until the review ends.
+Cada componente tiene **un** repositorio oficial. Los dos repositorios marcados como históricos son versiones anteriores que la plantilla del instructor menciona; se etiquetan y empaquetan igual, pero no contienen el producto final.
 
-Todos los repositorios originales de trabajo del proyecto deben estar aquí y deben ser **públicos**. El instructor contrasta lo entregado contra estos repositorios, así que deben seguir públicos y con todo su historial hasta terminar la revisión.
+**Tabla 1**
 
-If one is missing, add a row. If one is empty or no longer used, write that in the commit column. The visibility shown was checked on 2026-11-04.
+*Repositorios de SmartHome y su papel en la entrega*
 
-Si falta alguno, agregue la fila. Si uno está vacío o ya no se usa, indíquelo en la columna del commit. La visibilidad indicada se revisó el 2026-11-04.
+| Componente | Repositorio | Papel | Tag | ZIP de `main` en el tag | ZIP del repositorio completo |
+|---|---|---|---|---|---|
+| Backend | [nataliachala1/smarthome-backend](https://github.com/nataliachala1/smarthome-backend) | **Oficial** | `final-delivery-2026` | [smarthome-backend-final-delivery-2026-main.zip](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/releases/download/final-delivery/smarthome-backend-final-delivery-2026-main.zip) | [smarthome-backend-full-export.zip](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/releases/download/final-delivery/smarthome-backend-full-export.zip) |
+| Frontend web | [nataliachala1/smarthome-frontend-web](https://github.com/nataliachala1/smarthome-frontend-web) | **Oficial** | `final-delivery-2026` | [smarthome-frontend-web-final-delivery-2026-main.zip](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/releases/download/final-delivery/smarthome-frontend-web-final-delivery-2026-main.zip) | [smarthome-frontend-web-full-export.zip](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/releases/download/final-delivery/smarthome-frontend-web-full-export.zip) |
+| Móvil | [Kevin-Stiven-Lopez-Amaya404/from_movil](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil) | **Oficial** | `final-delivery-2026` | [from_movil-final-delivery-2026-main.zip](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/releases/download/final-delivery/from_movil-final-delivery-2026-main.zip) | [from_movil-full-export.zip](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/releases/download/final-delivery/from_movil-full-export.zip) |
+| Base de datos | [nataliachala1/smarthome-database](https://github.com/nataliachala1/smarthome-database) | **Oficial** | `final-delivery-2026` | [smarthome-database-final-delivery-2026-main.zip](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/releases/download/final-delivery/smarthome-database-final-delivery-2026-main.zip) | [smarthome-database-full-export.zip](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/releases/download/final-delivery/smarthome-database-full-export.zip) |
+| Documentación técnica | [Kevin-Stiven-Lopez-Amaya404/smart-home-doc](https://github.com/Kevin-Stiven-Lopez-Amaya404/smart-home-doc) | **Oficial** | `final-delivery-2026` | [smart-home-doc-final-delivery-2026-main.zip](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/releases/download/final-delivery/smart-home-doc-final-delivery-2026-main.zip) | [smart-home-doc-full-export.zip](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/releases/download/final-delivery/smart-home-doc-full-export.zip) |
+| Base de datos (anterior) | [nataliachala1/smart-home-database](https://github.com/nataliachala1/smart-home-database) | Histórico | `final-delivery-2026` | [smart-home-database-final-delivery-2026-main.zip](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/releases/download/final-delivery/smart-home-database-final-delivery-2026-main.zip) | [smart-home-database-full-export.zip](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/releases/download/final-delivery/smart-home-database-full-export.zip) |
+| Documentación (anterior) | [Kevin-Stiven-Lopez-Amaya404/smart-home-docs](https://github.com/Kevin-Stiven-Lopez-Amaya404/smart-home-docs) | Histórico (1 archivo; su README remite a `smart-home-doc`) | `final-delivery-2026` | [smart-home-docs-final-delivery-2026-main.zip](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/releases/download/final-delivery/smart-home-docs-final-delivery-2026-main.zip) | [smart-home-docs-full-export.zip](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/releases/download/final-delivery/smart-home-docs-full-export.zip) |
 
-| Componente | Repositorio original solicitado por el instructor | Estado verificado el 07-11-2026 | Acceso de `ariel5253` | SHA actual de `main` (NO tag final) | Tag `final-delivery-2026` | ZIP snapshot / export |
-|---|---|---|---|---|---|---|
-| Móvil | [from_movil](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil) | `main` actualizado por PR #49 (fusionado), CI móvil aprobada 07-11-2026; pendiente aceptación física Android/Shelly | Read; cambiar a Write | `d830ed08886618` | **No creado** | Pendientes |
-| Documentación anterior | [smart-home-docs](https://github.com/Kevin-Stiven-Lopez-Amaya404/smart-home-docs) | Público; repositorio histórico/no canónico; README actualizado con enlace explícito al canónico | Read; cambiar a Write | `ce8a6b5859ff7b` | **No creado** | Pendientes |
-| Base de datos anterior | [smart-home-database](https://github.com/nataliachala1/smart-home-database) | Público; README, sin modelo actual completo | No verificable desde integración; otorgar Write | `aa20de5230627f5` | **No creado** | Pendientes |
-| Backend | [smarthome-backend](https://github.com/nataliachala1/smarthome-backend) | Público; `main` protegida, pendiente de cierre técnico | No verificable desde integración; otorgar Write | `e5097116c603ea6` | **No creado** | Pendientes |
-| Frontend web | [smarthome-frontend-web](https://github.com/nataliachala1/smarthome-frontend-web) | Público; CI de `main` fallida | No verificable desde integración; otorgar Write | `daae7a411c0da21` | **No creado** | Pendientes |
+Fuente: elaboración propia.
 
-Before making a repository public, remove `.env` files and change any password, token or key that was ever committed.
+La documentación oficial es **`smart-home-doc`** (152 archivos). La base de datos oficial es **`smarthome-database`** (sin guion entre *smart* y *home*): contiene las 100 migraciones Liquibase y las políticas RLS.
+
+Los enlaces de los ZIP apuntan al Release [`final-delivery`](https://github.com/Kevin-Stiven-Lopez-Amaya404/ADSO-3145555/releases/tag/final-delivery) del fork de quien entrega. El commit exacto de cada tag queda en [`SHA256SUMS.txt`](SHA256SUMS.txt) junto a la huella de cada ZIP.
+
+## Por qué dos ZIP
+
+| Archivo | Contenido | Para qué sirve |
+|---|---|---|
+| `<repo>-final-delivery-2026-main.zip` | Solo el código de `main` en el tag (`git archive`) | La versión exacta entregada; es la que se usa para el registro de software |
+| `<repo>-full-export.zip` | Clon espejo: todas las ramas, tags e historial | Prueba del trabajo realizado y respaldo completo |
+
+## Cómo se generan
+
+Por cada repositorio, después de fusionar `dev → qa → main`:
+
+```bash
+git tag -a final-delivery-2026 -m "SmartHome final delivery 2026" origin/main
+git push origin final-delivery-2026
+git archive --format=zip --prefix=<repo>/ -o <repo>-final-delivery-2026-main.zip final-delivery-2026
+git clone --mirror <url> <repo>.git && zip -qr <repo>-full-export.zip <repo>.git
+sha256sum *.zip > SHA256SUMS.txt
+```
+
+## Integridad
+
+Verifique cada ZIP descargado con `sha256sum -c SHA256SUMS.txt`.
+
+## Acceso del instructor
+
+La cuenta `ariel5253` necesita **Write** en los siete repositorios. Cada dueño la agrega en *Settings → Collaborators → Add people → Write*: Natalia en los cuatro de `nataliachala1` y Kevin en los tres de `Kevin-Stiven-Lopez-Amaya404`.
 
 Antes de hacer público un repositorio, quite los archivos `.env` y cambie toda contraseña, token o llave que se haya subido alguna vez.
-
-The instructor account `ariel5253` needs write access to every repository, so pending items can be corrected for the software registration. Add it as a collaborator where the table says so.
-
-La cuenta del instructor, `ariel5253`, necesita acceso de escritura en cada repositorio, para poder corregir pendientes del registro de software. Agréguela como colaboradora donde la tabla lo indique.
-
-## Why two ZIP files / Por qué dos ZIP
-
-| File / Archivo | Content / Contenido | Purpose / Para qué sirve |
-|---|---|---|
-| `<repo>-final-delivery-2026-main.zip` | Only the code of `main` at tag `final-delivery-2026` / Solo el código de `main` en el tag | The exact version delivered, used for software registration / La versión exacta entregada, la que se usa para registro de software |
-| `<repo>-full-export.zip` | The whole repository: all branches, tags and history / Todo el repositorio: ramas, tags e historial | Proof of the work done and a complete backup / Prueba del trabajo realizado y respaldo completo |
-
-## Where the ZIP files live / Dónde quedan los ZIP
-
-The ZIP files do not go in this folder. They are attached to a GitHub Release in the fork of the person who delivers, named `final-delivery`, and linked in the table above.
-
-Los ZIP no van en esta carpeta. Se adjuntan a un Release de GitHub llamado `final-delivery` en el fork de quien entrega, y se enlazan en la tabla de arriba.
-
-## Integrity / Integridad
-
-Copy the SHA-256 of every ZIP into [`SHA256SUMS.txt`](SHA256SUMS.txt). / Copie el SHA-256 de cada ZIP en ese archivo.
-
-
-## Identificación inequívoca de la documentación oficial
-
-**Repositorio de documentación canónico recomendado:** [Kevin-Stiven-Lopez-Amaya404/smart-home-doc](https://github.com/Kevin-Stiven-Lopez-Amaya404/smart-home-doc). Contiene la documentación técnica desarrollada (152 archivos en la revisión del instructor). `smart-home-docs` es un repositorio de referencia anterior con solo un archivo y NO debe presentarse como fuente documental completa. **El instructor solicita también etiquetar/exportar `smart-home-docs`; no debe omitirse del paquete de cinco repositorios exigido sin su aprobación.** Se recomienda mantener un sexto paquete para el repo documental canónico, si el equipo y el instructor lo autorizan.
-
-**Base de datos de trabajo vigente:** [nataliachala1/smarthome-database](https://github.com/nataliachala1/smarthome-database). El nombre que aparece en la plantilla del instructor, `nataliachala1/smart-home-database`, corresponde al repositorio anterior. Esta diferencia requiere que el equipo confirme si debe entregarse también el repositorio vigente además de los cinco exigidos; no reemplazar uno por otro silenciosamente.
-
-## Condición obligatoria antes de etiquetar y generar paquetes
-
-No existe el tag `final-delivery-2026` en ninguno de los **cinco** repositorios solicitados a la fecha de revisión. Los SHA de la tabla reflejan el estado observado de `main`; **no son commits aprobados para release**. No crear tags hasta revisar CI/QA, cerrar ramas y obtener la aprobación del responsable técnico. Cada uno de los cinco requiere dos ZIP diferentes (snapshot `main` al tag anotado y repositorio Git completo con ramas/tags/historial) y hashes SHA-256 calculados sobre los bytes reales. Luego adjuntar los diez ZIP al Release `final-delivery` del fork de la persona que entrega y colocar enlaces/huellas en esta carpeta.
-
-## Accesos del instructor
-
-`ariel5253` debe tener **Write** en los cinco repositorios. Se verificó **Read** (insuficiente) en `from_movil` y `smart-home-docs`. Para las tres cuentas de Natalia, el conector no permitió consultar permisos (403); sus propietarios deben comprobarlo en **Settings → Collaborators and teams → Invite a collaborator**. No se han cambiado permisos de nadie mediante esta actualización documental.
-
-
-## Alineación posterior de repositorio documental y CI web
-
-- **Documentación:** el README de [`smart-home-docs`](https://github.com/Kevin-Stiven-Lopez-Amaya404/smart-home-docs) fue actualizado para señalar que el canónico es [`smart-home-doc`](https://github.com/Kevin-Stiven-Lopez-Amaya404/smart-home-doc). SHA de `main` de histórico después de esa aclaración: `ce8a6b5859ff7b6fcfee527d9007ee5089cad1ce`. **Este SHA no es una etiqueta final aprobada.**
-- **Frontend web:** el [PR #7 de corrección de CI](https://github.com/Kevin-Stiven-Lopez-Amaya404/smarthome-frontend-web/pull/7) se **fusionó en `dev` del fork** (commit `9928217825c79cf8150b0dd97ce2937c1d95603d`), con [workflow #42395316954 aprobado](https://github.com/Kevin-Stiven-Lopez-Amaya404/smarthome-frontend-web/actions/runs/42395316954). Los intentos de abrir PR hacia `nataliachala1/smarthome-frontend-web:dev` fueron rechazados con 403. **Natalia debe proponer/integrar esa corrección al repo original, revisar CI propia y promover por `dev → qa → main` antes del tag.** El último `main` upstream sigue siendo `daae7a411c0da213ff078e9ae6fde67d9f29702b` y su CI falló; no generar tags de entrega sobre ese estado sin aceptación.
-
-
-### Evidencia adicional de la integración web (7 nov 2026)
-
-La CI de la rama `dev` **ya integrada en el fork** también concluyó **SUCCESS**: [workflow #42395677610](https://github.com/Kevin-Stiven-Lopez-Amaya404/smarthome-frontend-web/actions/runs/42395677610), commit `9928217825c79cf8150b0dd97ce2937c1d95603d`. Esta es evidencia adicional de la corrección del smoke. **No sustituye la CI de `main` en `nataliachala1/smarthome-frontend-web`**, donde el cambio aún no ha sido promovido.
-
-
-## Precheck actualizado de repositorios (7 nov 2026)
-
-El estado consultado de `main`, tags y CI se registra en [PRECHECK-2026-11-07.md](PRECHECK-2026-11-07.md). **Móvil avanzó:** PR #61 y #49 fusionados, `main` en `d830ed08886618491ebba2429fd4ffd615ba75ea`, CI [aprobada](https://github.com/Kevin-Stiven-Lopez-Amaya404/from_movil/actions/runs/42406563397); pruebas físicas e incidencia #42 pendientes. El `main` upstream web sigue con CI fallida. No se publicaron tags ni diez ZIP. Existe un generador local de PowerShell **para ejecutar solo con aprobación** del equipo; no es evidencia de entrega.
