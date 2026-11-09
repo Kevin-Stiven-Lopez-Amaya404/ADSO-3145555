@@ -75,10 +75,10 @@ The following is the instructor's provisional author/contributor list and must b
 
 | Declaration / Declaración | Option / Opción |
 |---|---|
-| Origin / Origen | ☑ Original ☐ Derived work / Obra derivada. Dato técnico: el código es del equipo y usa librerías de terceros sin modificarlas (sección 8); la interfaz web partió de un prototipo de Figma Make con componentes shadcn/ui. Decisión del equipo en el PR #17. |
-| If derived, base work / Si es derivada, obra de base | Si se declara derivada: prototipo de interfaz generado con Figma Make (2026-09) y componentes shadcn/ui (MIT). |
-| Type of work / Clase de obra | ☐ Individual ☑ In collaboration / En colaboración ☐ Collective / Colectiva ☐ Anonymous / Anónima ☐ Pseudonymous / Seudónima ☐ Posthumous / Póstuma. Dato técnico: tres aprendices con commits en los mismos repositorios. Decisión del equipo en el PR #17. |
-| Publication / Publicación | ☐ Unpublished / Inédita ☑ Published / Publicada. Dato técnico: el código está en repositorios públicos de GitHub. Decisión del equipo en el PR #17; el Centro puede revisarla. |
+| Origin / Origen | ☑ Original ☐ Derived work / Obra derivada |
+| If derived, base work / Si es derivada, obra de base | No aplica: obra original. Los componentes de terceros (librerías, prototipo de Figma Make con shadcn/ui e imágenes de Unsplash) se declaran en la sección 8 |
+| Type of work / Clase de obra | ☐ Individual ☑ In collaboration / En colaboración ☐ Collective / Colectiva ☐ Anonymous / Anónima ☐ Pseudonymous / Seudónima ☐ Posthumous / Póstuma |
+| Publication / Publicación | ☐ Unpublished / Inédita ☑ Published / Publicada |
 | If published, date and place / Si está publicada, fecha y lugar | GitHub (github.com/nataliachala1 y github.com/Kevin-Stiven-Lopez-Amaya404); primer commit público: 2026-06-26. |
 
 Software is treated as unpublished unless the rights holder states otherwise (art. 4). A public repository may count as publication: the team records it here, and the Centro decides the final declaration.
