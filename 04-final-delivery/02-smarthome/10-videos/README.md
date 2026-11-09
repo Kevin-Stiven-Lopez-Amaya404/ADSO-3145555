@@ -22,4 +22,4 @@ Carpeta general del proyecto: [V1](https://drive.google.com/drive/folders/1Xixia
 
 ## Privacidad
 
-El tutorial muestra los correos de dos integrantes en las pantallas de invitación (alrededor de 02:55–03:10) y de perfil (alrededor de 03:35). Su publicación queda a decisión de cada titular; si alguna prefiere ocultarlo, se reemplaza el archivo en Drive con el mismo nombre y las zonas difuminadas.
+El tutorial muestra los correos de dos integrantes en las pantallas de invitación (alrededor de 02:55–03:10) y de perfil (alrededor de 03:35). Karen y Natalia aceptaron que el video se publique así (decisión comunicada por el equipo el 2026-11-09). Si alguna cambia de opinión, se reemplaza el archivo en Drive con el mismo nombre y esas zonas difuminadas; el enlace no cambia.
