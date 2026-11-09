@@ -71,7 +71,7 @@ Verificación de datos: las casillas sin marcar no implican autorización. Los n
 | [`07-improvement-actions/`](07-improvement-actions/) | Improvement actions / Acciones de mejoramiento | ☑ PDF y DOCX |
 | [`08-manuals/`](08-manuals/) | Manuals / Manuales | ☑ [Técnico](08-manuals/technical-manual.pdf), [instalación](08-manuals/installation-manual.pdf) y [usuario](08-manuals/end-user-manual.pdf) |
 | [`09-project-article/`](09-project-article/) | Project article / Artículo del proyecto | ☑ PDF y DOCX |
-| [`10-videos/`](10-videos/) | Videos / Videos | ☑ Pitch 01:30 y tutorial 04:45 (enlaces en la carpeta) |
+| [`10-videos/`](10-videos/) | Videos / Videos | ☑ Pitch 01:30 y tutorial 04:54, públicos en Drive (enlaces en la carpeta) |
 | [`code-tag/`](code-tag/) | Repository links, tags and ZIP files / Enlaces, tags y ZIP | Repositorio oficial de cada componente identificado; tags y ZIP en el Release `final-delivery` |
 | [`team-roster.md`](team-roster.md) | Team and roles / Equipo y roles | ☑ Roles según el historial de commits |
 | [`software-registration.md`](software-registration.md) | Software registration data / Datos para registro de software | ☑ Datos técnicos y componentes de terceros; declaraciones legales las marca cada integrante |
@@ -87,8 +87,8 @@ Aquí solo van archivos demasiado pesados para GitHub, como videos de demostraci
 
 | File / Archivo | Size / Tamaño | Link / Enlace |
 |---|---|---|
-| SmartHome_Pitch_Propuesto_v2_01m30s.mp4 (pitch, 01:30) | Video MP4 | [Drive](https://drive.google.com/file/d/1k4CZszu2KOS_gyIt1kTAstObvPRIE2Fz/view) |
-| SmartHome_Tutorial_Web_Propuesto_04m45s.mp4 (tutorial, 04:45) | Video MP4 | [Drive](https://drive.google.com/file/d/1KikggYTY1ozkMjHb2Inf7flc__lpSEkB/view) |
+| pitch-publicitario.mp4 (pitch, 01:30) | Video MP4 | [Drive](https://drive.google.com/file/d/15RA6TZaiIlZhd5isQAHOYZWuhg8eXAaI/view) |
+| aplicativo.mp4 (tutorial de la app móvil, 04:54) | Video MP4 | [Drive](https://drive.google.com/file/d/1Ibl-IyE0H5PFERU_6D1f4x5mvL_TGDzE/view) |
 | Fuentes documentales (SRS y anexos) | Carpeta | [Drive](https://drive.google.com/drive/folders/1FI2E_qAiMVAG1lDXIPhSyPoFF3Pc8ndQ) |
 
 ## Pull requests de la entrega

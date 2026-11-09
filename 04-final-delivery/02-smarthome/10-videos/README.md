@@ -6,18 +6,20 @@
 
 | Video | Archivo | Duración | Rango exigido | Enlace |
 |---|---|---:|---|---|
-| **Pitch** | `SmartHome_Pitch_Propuesto_v2_01m30s.mp4` | 01:30 | 01:00–02:00 | [Ver en Drive](https://drive.google.com/file/d/1k4CZszu2KOS_gyIt1kTAstObvPRIE2Fz/view) |
-| **Tutorial** | `SmartHome_Tutorial_Web_Propuesto_04m45s.mp4` | 04:45 | 03:00–05:00 | [Ver en Drive](https://drive.google.com/file/d/1KikggYTY1ozkMjHb2Inf7flc__lpSEkB/view) |
+| **Pitch** | `pitch-publicitario.mp4` | 01:30 | 01:00–02:00 | [Ver en Drive](https://drive.google.com/file/d/15RA6TZaiIlZhd5isQAHOYZWuhg8eXAaI/view) |
+| **Tutorial** | `aplicativo.mp4` | 04:54 | 03:00–05:00 | [Ver en Drive](https://drive.google.com/file/d/1Ibl-IyE0H5PFERU_6D1f4x5mvL_TGDzE/view) |
 
-Fuente: elaboración propia. Duraciones medidas con `ffprobe` sobre los archivos subidos.
+Fuente: elaboración propia. Duraciones medidas con `ffprobe` sobre los archivos descargados de Drive el 2026-11-09.
 
-- **Pitch:** presenta el problema (consumo eléctrico sin control), la solución (web y app móvil con relés Shelly) y el cierre. Es visual, con subtítulos.
-- **Tutorial:** recorrido continuo por el panel web: hogares, miembros, dispositivos, encendido y apagado y consumo. Conserva el audio de la grabación.
-
-Las grabaciones originales de las que salen (06:29 y 10:05) quedan como material de apoyo; no son videos de la entrega.
+- **Pitch:** presenta el problema (no sabemos cómo consumimos la energía), la solución (plataforma web y app móvil con dispositivos Shelly), cómo funciona (dispositivo, MQTT, backend y base de datos), las funciones y los beneficios. Es visual, con subtítulos.
+- **Tutorial:** recorrido por la aplicación móvil en 12 capítulos: registro e inicio de sesión, hogares, energía y consumo, tarifas y metas, alertas en tiempo real, invitación de personas, gestión de dispositivos, perfil, configuración, sincronización, panel de dispositivos y cierre de sesión.
 
 ## Acceso
 
-Cada video y la [carpeta](https://drive.google.com/drive/folders/15-wEYwgt3zQ9FwHxA-GdMDi2s4WEPGmm) se comparten como **Cualquier persona con el enlace → Lector** (nunca Editor). Quien es dueño en Drive lo cambia en *Compartir → Acceso general* y abre cada enlace en una ventana de incógnito para comprobarlo.
+Los dos videos están en la carpeta pública [SmartHome / VIDEOS](https://drive.google.com/drive/folders/1AbzF8DXtZo0moXV-CeV4_u3RIVs4y_LY), con las subcarpetas `PITCH-PUBLICITARIO` y `TUTORIAL-FUNCIONAL`. Compartidos como **Cualquier persona con el enlace → Lector**. Se comprobó el 2026-11-09 que los dos archivos y las carpetas abren sin iniciar sesión.
 
-La [revisión de privacidad](revision-privacidad-2026-11-07.md) encontró en algunos fotogramas un nombre de cuenta y una sugerencia de correo. Antes de abrir el acceso, el dueño revisa esos fotogramas y, si hace falta, sube la versión con esas zonas ocultas usando el mismo nombre de archivo.
+Carpeta general del proyecto: [V1](https://drive.google.com/drive/folders/1XixiaSgSRYYQ-v05Cc7eiCjQqPzcn5i1).
+
+## Privacidad
+
+El tutorial muestra los correos de dos integrantes en las pantallas de invitación (alrededor de 02:55–03:10) y de perfil (alrededor de 03:35). Su publicación queda a decisión de cada titular; si alguna prefiere ocultarlo, se reemplaza el archivo en Drive con el mismo nombre y las zonas difuminadas.

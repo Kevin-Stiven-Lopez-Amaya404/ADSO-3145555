@@ -10,11 +10,11 @@ SENA ADSO, ficha 3145555. Actualizado el 2026-11-08.
 |---|---|---|---|---|
 | 1 | Release `final-delivery` con dos ZIP por repositorio | Procedimiento y enlaces listos. Los ZIP se generan sobre el tag, después de fusionar los PR de código a `main` | [`code-tag/`](code-tag/README.md) | Kevin, tras las fusiones |
 | 2 | Unir los PR #13 y #17 | El PR #17 contiene todo lo del #13 | [PR #17](https://github.com/code-sena/ADSO-3145555/pull/17) | Karen cierra el [#13](https://github.com/code-sena/ADSO-3145555/pull/13) sin fusionar |
-| 3 | Un elemento de Drive pide permiso | Guía de permisos | [Accesos de Drive](AUDITORIA-ACCESO-DRIVE.md) | Dueño de cada archivo: *Cualquier persona con el enlace → Lector* |
+| 3 | Un elemento de Drive pide permiso | Carpetas y videos compartidos como lector; comprobado sin iniciar sesión el 2026-11-09 | [Accesos de Drive](AUDITORIA-ACCESO-DRIVE.md) | Hecho |
 | 4 | Sección 01 solo enlaza el SRS | SRS final en PDF dentro de la carpeta | [`01-requirements-specification/`](01-requirements-specification/requirements-specification.pdf) | Hecho |
 | 5 | Secciones 02, 04, 05, 06 y 09 solo en Markdown | PDF y DOCX editable en todas las secciones 02–09, en Arial 11 pt, con tablas numeradas y referencias APA 7 | [README](README.md#delivery-contents--contenido-de-la-entrega) | Hecho |
 | 6 | Dos repositorios de documentación | `smart-home-doc` es el oficial; `smart-home-docs` es histórico. Igual con `smarthome-database` (oficial) y `smart-home-database` (histórico) | [`code-tag/`](code-tag/README.md) | Hecho |
-| 7 | Videos: cuál es el pitch y cuál el tutorial | Pitch 01:30 y tutorial 04:45, con enlace | [`10-videos/`](10-videos/README.md) | Dueño en Drive abre el acceso de lectura |
+| 7 | Videos: cuál es el pitch y cuál el tutorial | Pitch 01:30 y tutorial 04:54, públicos con permiso de lector (comprobado sin iniciar sesión) | [`10-videos/`](10-videos/README.md) | Hecho |
 | 8 | Tag `final-delivery-2026` y dos ZIP en cinco repositorios | Se etiquetan los cinco pedidos y, además, los dos oficiales (siete en total) | [`code-tag/`](code-tag/README.md) | Kevin y Natalia, tras las fusiones |
 | 9 | Autorización de datos en el README (0 de 3) | Los tres integrantes autorizaron en comentarios del PR #17; cada casilla enlaza a su comentario | [README](README.md#team-members--integrantes) | Hecho |
 | 10 | Rol en `team-roster.md` (0 de 3) | Rol de cada aprendiz, con la tabla de commits como evidencia | [`team-roster.md`](team-roster.md) | Hecho; cada integrante revisa el suyo |
